@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vollkorn SC";
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.header {
+  background-color: #B8A5FF;
+}
+.header__container {
+  padding: 15px 0;
+}
+.header__navbar a, .header__navbar li {
+  color: #FFFFF0;
+}
+.header__navbar a:hover, .header__navbar li:hover {
+  color: #FFEC99;
+}
+
+.navbar-nav {
+  -moz-column-gap: 1.875rem;
+       column-gap: 1.875rem;
+}
+
+.header .logo {
+  padding: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+.header .logo:focus-visible {
+  outline: none;
+}
+
+.dropdown-menu {
+  background-color: #B8A5FF;
+  color: #FFFFF0;
+  border: 1px solid #FFFFF0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  right: 0;
+}
+.dropdown-menu li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link, .logo, .dropdown-item {
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar .navbar-nav .nav-item .nav-link::before, .logo::before, .dropdown-item::before {
+  position: absolute;
+  bottom: 5px;
+  left: 8;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: #FFEC99;
+  transition: 0.3s;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover:before, .logo:hover:before, .dropdown-item:hover:before {
+  width: 100%;
+}
+.navbar .navbar-nav .nav-item .nav-link:focus, .logo:focus, .dropdown-item:focus {
+  color: #FFD000;
+  box-shadow: none;
+}
+.navbar .navbar-nav .nav-item .nav-link:active, .logo:active, .dropdown-item:active {
+  color: #FFD000;
+}
+
+.dropdown-menu {
+  padding-left: 8px;
+}
+
+.dropdown-item {
+  display: inline;
+}
+.dropdown-item:hover {
+  background-color: #B8A5FF;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    width: 30px;
+    height: 14px;
+    position: relative;
+    z-index: 10;
+  }
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    display: block;
+    border-radius: 50px;
+    background: #FFFFF0;
+    margin-bottom: 4px;
+    transition: 1s all;
+  }
+  .hamburger span:last-child {
+    margin-bottom: 0;
+  }
+  .hamburger_active span {
+    transition: 1s all;
+    margin-bottom: -3px;
+  }
+  .hamburger_active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .hamburger_active span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap')
+
+$base-color-violet: #B8A5FF
+$base-color-hover: #FFEC99
+$base-color-active: #FFD000
+$base-color-white: #FFFFF0
+$base-font: "Vollkorn SC"
+$body-color: #FFFFF0
+    
+    
+*
+    box-sizing: border-box
+
+body
+    font-family: $base-font
+
+.container
+    max-width: 1140px
+
+// Шапка
+.header
+    background-color: $base-color-violet
+    &__container
+        padding: 15px 0
+    &__navbar
+        a, li
+            color: $base-color-white
+            &:hover
+                color: $base-color-hover
+
+.navbar-nav
+    column-gap: 1.875rem
+                  
+.header .logo
+    padding: 0
+    font-size: 32px
+    font-weight: bold
+    &:focus-visible
+        outline: none
+
+.dropdown-menu
+    background-color: $base-color-violet
+    color: $base-color-white
+    border: 1px solid $base-color-white
+    padding-top: 30px
+    padding-bottom: 30px
+    right: 0
+    li:not(:last-child)
+        margin-bottom: 20px
+
+.navbar .navbar-nav .nav-item .nav-link, .logo, .dropdown-item
+    position: relative
+    padding-right: 0
+    padding-left: 0
+    &::before
+        position: absolute
+        bottom: 5px
+        left: 8
+        content: ""
+        display: block
+        height: 1px
+        width: 0
+        background-color: $base-color-hover
+        transition: 0.3s
+    &:hover:before
+        width: 100%
+    &:focus
+        color: $base-color-active
+        box-shadow: none
+    &:active
+        color: $base-color-active
+        
+
+.dropdown-menu
+    padding-left: 8px
+
+.dropdown-item
+    display: inline
+    &:hover
+        background-color: $base-color-violet
+
+
+
+
+
+
+@media (max-width: 768px)
+    .hamburger
+        width: 30px
+        height: 14px
+        position: relative
+        // top: 13px
+        // right: 13px
+        z-index: 10
+        span
+            height: 3px
+            width: 100%
+            display: block
+            border-radius: 50px
+            background: $base-color-white
+            margin-bottom: 4px
+            transition: 1s all
+            &:last-child
+                margin-bottom: 0
+        &_active
+            
+            span
+                transition: 1s all
+                margin-bottom: -3px
+                &:nth-child(1)
+                    transform: rotate(45deg)
+                &:nth-child(2)
+                    transform: rotate(-45deg)
+
+
+
