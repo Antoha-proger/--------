@@ -41,7 +41,7 @@ body {
 .dropdown-menu {
   background-color: #B8A5FF;
   color: #FFFFF0;
-  border: 1px solid #FFFFF0;
+  border: none;
   padding-top: 30px;
   padding-bottom: 30px;
   right: 0;
@@ -88,33 +88,21 @@ body {
   background-color: #B8A5FF;
 }
 
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 @media (max-width: 768px) {
-  .hamburger {
-    width: 30px;
-    height: 14px;
-    position: relative;
-    z-index: 10;
-  }
-  .hamburger span {
-    height: 3px;
+  .container {
     width: 100%;
-    display: block;
-    border-radius: 50px;
-    background: #FFFFF0;
-    margin-bottom: 4px;
-    transition: 1s all;
   }
-  .hamburger span:last-child {
-    margin-bottom: 0;
+  .nav-link {
+    display: inline;
   }
-  .hamburger_active span {
-    transition: 1s all;
-    margin-bottom: -3px;
-  }
-  .hamburger_active span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-  .hamburger_active span:nth-child(2) {
-    transform: rotate(-45deg);
+  .nav-item:not(:last-child) {
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

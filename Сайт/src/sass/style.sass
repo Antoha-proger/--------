@@ -41,7 +41,7 @@ body
 .dropdown-menu
     background-color: $base-color-violet
     color: $base-color-white
-    border: 1px solid $base-color-white
+    border: none
     padding-top: 30px
     padding-bottom: 30px
     right: 0
@@ -69,7 +69,7 @@ body
         box-shadow: none
     &:active
         color: $base-color-active
-        
+
 
 .dropdown-menu
     padding-left: 8px
@@ -79,38 +79,19 @@ body
     &:hover
         background-color: $base-color-violet
 
-
+.navbar-toggler
+    border: none
+    &:focus
+        box-shadow: none
 
 
 
 
 @media (max-width: 768px)
-    .hamburger
-        width: 30px
-        height: 14px
-        position: relative
-        // top: 13px
-        // right: 13px
-        z-index: 10
-        span
-            height: 3px
-            width: 100%
-            display: block
-            border-radius: 50px
-            background: $base-color-white
-            margin-bottom: 4px
-            transition: 1s all
-            &:last-child
-                margin-bottom: 0
-        &_active
-            
-            span
-                transition: 1s all
-                margin-bottom: -3px
-                &:nth-child(1)
-                    transform: rotate(45deg)
-                &:nth-child(2)
-                    transform: rotate(-45deg)
+    .container
+        width: 100%
+    .nav-link
+        display: inline
 
-
-
+    .nav-item:not(:last-child)
+        margin-bottom: 20px
