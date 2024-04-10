@@ -22,7 +22,7 @@
                   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Популярные алгоритмы</a>
+                        <a class="nav-link" href="#slider">Популярные алгоритмы</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,7 +59,7 @@
         </div>
       </section>
 
-      <section class="main-slider">
+      <section class="main-slider" id="slider">
         <div class="container main-slider__container">
           <h2 class="main-slider__title title" id="popular-algorithms">Популярные алгоритмы</h2>
           <div id="carouselExampleIndicators" class="main-slider__carousel carousel slide">
@@ -76,10 +76,26 @@
                 </div>
               </div>
               <div class="main-slider__carousel-item carousel-item">
-                <img src="img/slider-img-1.png" class="d-block w-100" alt="...">
+                <div class="main-slider__content">
+                  <div class="main-slider__text">
+                    <h2 class="main-slider__algorithm-name">AES</h2>
+                    <p class="main-slider__algorithm_descr">
+                      симметричный алгоритм блочного шифрования, принятый в качестве стандарта шифрования правительством США по результатам конкурса AES. Этот алгоритм хорошо проанализирован и сейчас широко используется, как это было с его предшественником DES. Национальный институт стандартов и технологий США опубликовал спецификацию AES 26 ноября 2001 года после пятилетнего периода, в ходе которого были созданы и оценены 15 кандидатур.
+                    </p>
+                  </div>
+                  <img src="img/slider-img-2.png" class="d-block w-100" alt="Создатель алгоритма" width="354" height="401">
+                </div>
               </div>
               <div class="main-slider__carousel-item carousel-item">
-                <img src="img/slider-img-1.png" class="d-block w-100" alt="...">
+                <div class="main-slider__content">
+                  <div class="main-slider__text">
+                    <h2 class="main-slider__algorithm-name">ГОСТ 28147-8</h2>
+                    <p class="main-slider__algorithm_descr">
+                      Стандарт Российской Федерации на шифрование и имитозащиту данных. Первоначально имел гриф (ОВ или СС - точно не известно), затем гриф последовательно снижался, и к моменту официального проведения алгоритма через Госстандарт СССР в 1989 году был снят. Алгоритм остался ДСП (как известно, ДСП не считается грифом). В 1989 году стал официальным стандартом СССР, а позже, после распада СССР, федеральным стандартом Российской Федерации.
+                    </p>
+                  </div>
+                  <img src="img/slider-img-3.png" class="d-block w-100" alt="Создатель алгоритма" width="354" height="401">
+                </div>
               </div>
             </div>
             <button class="carousel-control-prev control-button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
