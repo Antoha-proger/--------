@@ -15,6 +15,7 @@ body {
   background-color: #B8A5FF;
 }
 .header__container {
+  min-height: 100px;
   padding: 15px 0;
 }
 .header__navbar a, .header__navbar li {
@@ -95,7 +96,79 @@ body {
   box-shadow: none;
 }
 
-@media (max-width: 768px) {
+.main-part {
+  background-color: #B8A5FF;
+}
+.main-part__container {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 34px;
+       column-gap: 34px;
+}
+.main-part__title {
+  color: #FFFFF0;
+  margin: 0;
+  margin-bottom: 45px;
+}
+.main-part__text {
+  color: #FFFFF0;
+  margin: 0;
+}
+.main-part__right-part {
+  align-self: flex-end;
+}
+.main-part__right-part img {
+  width: 34.75rem;
+  height: 31.875rem;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.main-slider__container {
+  padding-top: 136px;
+}
+.main-slider__title {
+  color: #B8A5FF;
+  margin-bottom: 45px;
+}
+.main-slider__content {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 125px;
+       column-gap: 125px;
+}
+.main-slider__algorithm-name {
+  color: #B8A5FF;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.main-slider__algorithm_descr {
+  color: #B8A5FF;
+  font-size: 18px;
+}
+.main-slider__carousel {
+  max-height: 450px;
+}
+
+.control-button {
+  background-color: #B8A5FF;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  border-radius: 20px;
+  opacity: 0.3;
+}
+
+@media (max-width: 576px) {
   .container {
     width: 100%;
   }
