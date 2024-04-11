@@ -5,8 +5,8 @@ $base-color-hover: #FFEC99
 $base-color-active: #FFD000
 $base-color-white: #FFFFF0
 $base-font: "Vollkorn SC"
-$body-color: #FFFFF0
-    
+$base-button-violet-color-hover: #694CD2
+$base-button-white-color-hover: #FFFFF0
     
 *
     box-sizing: border-box
@@ -108,18 +108,11 @@ body
             width: 34.75rem
             height: 31.875rem
 
-
-.title
-    font-size: 36px
-    font-weight: bold
-
-.text
-    font-size: 16px
-
-
+// Слайдер
 .main-slider
     &__container
         padding-top: 136px
+        margin-bottom: 20px
     &__title
         color: $base-color-violet
         margin-bottom: 45px
@@ -145,6 +138,93 @@ body
     top: 50%
     border-radius: 20px
     opacity: 0.3
+
+// Шифр Цезаря
+.сaesars-сipher
+    min-height: 600px
+    background-color: $base-color-violet
+    display: flex
+    align-items: center
+    margin-bottom: 48px
+    &__container
+        display: flex
+        // align-items: center
+        justify-content: space-between
+        column-gap: 150px
+    &__right-part
+        align-self: flex-start
+    &__title
+        margin-bottom: 60px
+        color: $base-color-white
+        text-align: right
+    &__text
+        color: $base-color-white
+        margin-bottom: 60px
+    &__button
+        border: 1px solid $base-color-white
+        color: $base-color-white
+        &::after
+            background: url("../icons/ArrowRight11.svg")
+        &:hover
+            background-color: $base-button-white-color-hover 
+            color: $base-color-violet
+            border: none
+        &:hover::after
+            background: url("../icons/ArrowRight12.svg")
+
+// Шифр Виженера
+.vigener-cipher
+    min-height: 500px
+    // display: flex
+    // align-items: center
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        column-gap: 240px
+    &__title
+        margin-bottom: 60px
+        color: $base-color-violet
+        text-align: left
+    &__text
+        color: $base-color-violet
+        margin-bottom: 60px
+    &__button
+        border: 1px solid $base-color-violet
+        color: $base-color-violet
+        &::after
+            background: url("../icons/ArrowRight12.svg")
+        &:hover
+            background-color: $base-button-violet-color-hover 
+            color: $base-color-white
+            border: none
+        &:hover::after
+            background: url("../icons/ArrowRight11.svg")
+  
+.title
+    font-size: 36px
+    font-weight: bold
+
+.text
+    font-size: 16px
+
+.button
+    position: relative
+    width: 261px
+    height: 60px
+    background-color: rgba(0, 0, 0, 0) 
+    padding-left: 20px
+    text-align: left
+    transition: 0.4s
+    &::after
+        content: ""
+        position: absolute
+        right: 20px
+        width: 35px
+        height: 35px
+        top: 18%
+        
+    
 
 
 @media (max-width: 576px)

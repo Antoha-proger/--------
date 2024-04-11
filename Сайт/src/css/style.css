@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap");
 * {
   box-sizing: border-box;
@@ -123,17 +124,9 @@ body {
   height: 31.875rem;
 }
 
-.title {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.text {
-  font-size: 16px;
-}
-
 .main-slider__container {
   padding-top: 136px;
+  margin-bottom: 20px;
 }
 .main-slider__title {
   color: #B8A5FF;
@@ -166,6 +159,109 @@ body {
   top: 50%;
   border-radius: 20px;
   opacity: 0.3;
+}
+
+.сaesars-сipher {
+  min-height: 600px;
+  background-color: #B8A5FF;
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.сaesars-сipher__container {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+}
+.сaesars-сipher__right-part {
+  align-self: flex-start;
+}
+.сaesars-сipher__title {
+  margin-bottom: 60px;
+  color: #FFFFF0;
+  text-align: right;
+}
+.сaesars-сipher__text {
+  color: #FFFFF0;
+  margin-bottom: 60px;
+}
+.сaesars-сipher__button {
+  border: 1px solid #FFFFF0;
+  color: #FFFFF0;
+}
+.сaesars-сipher__button::after {
+  background: url("../icons/ArrowRight11.svg");
+}
+.сaesars-сipher__button:hover {
+  background-color: #FFFFF0;
+  color: #B8A5FF;
+  border: none;
+}
+.сaesars-сipher__button:hover::after {
+  background: url("../icons/ArrowRight12.svg");
+}
+
+.vigener-cipher {
+  min-height: 500px;
+}
+.vigener-cipher__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 240px;
+       column-gap: 240px;
+}
+.vigener-cipher__title {
+  margin-bottom: 60px;
+  color: #B8A5FF;
+  text-align: left;
+}
+.vigener-cipher__text {
+  color: #B8A5FF;
+  margin-bottom: 60px;
+}
+.vigener-cipher__button {
+  border: 1px solid #B8A5FF;
+  color: #B8A5FF;
+}
+.vigener-cipher__button::after {
+  background: url("../icons/ArrowRight12.svg");
+}
+.vigener-cipher__button:hover {
+  background-color: #694CD2;
+  color: #FFFFF0;
+  border: none;
+}
+.vigener-cipher__button:hover::after {
+  background: url("../icons/ArrowRight11.svg");
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.button {
+  position: relative;
+  width: 261px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 20px;
+  text-align: left;
+  transition: 0.4s;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  top: 18%;
 }
 
 @media (max-width: 576px) {
