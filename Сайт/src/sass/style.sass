@@ -16,6 +16,7 @@ body
 
 .container
     max-width: 1140px
+    padding-top: 83px
 
 // Шапка
 .header
@@ -111,7 +112,7 @@ body
 // Слайдер
 .main-slider
     &__container
-        padding-top: 136px
+        // padding-top: 83px
         margin-bottom: 20px
     &__title
         color: $base-color-violet
@@ -143,9 +144,6 @@ body
 .сaesars-сipher
     min-height: 600px
     background-color: $base-color-violet
-    display: flex
-    align-items: center
-    margin-bottom: 48px
     &__container
         display: flex
         // align-items: center
@@ -179,7 +177,7 @@ body
     // align-items: center
     &__container
         display: flex
-        align-items: center
+        // align-items: center
         justify-content: space-between
         column-gap: 240px
     &__title
@@ -200,7 +198,37 @@ body
             border: none
         &:hover::after
             background: url("../icons/ArrowRight11.svg")
-  
+
+.atbash-cipher
+    min-height: 500px
+    background-color: $base-color-violet
+    &__container
+        display: flex
+        // align-items: center
+        justify-content: space-between
+        column-gap: 135px
+    &__right-part
+        align-self: flex-start
+    &__title
+        margin-bottom: 60px
+        color: $base-color-white
+        text-align: right
+    &__text
+        color: $base-color-white
+        margin-bottom: 60px
+    &__button
+        border: 1px solid $base-color-white
+        color: $base-color-white
+        &::after
+            background: url("../icons/ArrowRight11.svg")
+        &:hover
+            background-color: $base-button-white-color-hover 
+            color: $base-color-violet
+            border: none
+        &:hover::after
+            background: url("../icons/ArrowRight12.svg")
+
+
 .title
     font-size: 36px
     font-weight: bold

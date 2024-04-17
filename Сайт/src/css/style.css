@@ -10,6 +10,7 @@ body {
 
 .container {
   max-width: 1140px;
+  padding-top: 83px;
 }
 
 .header {
@@ -125,7 +126,6 @@ body {
 }
 
 .main-slider__container {
-  padding-top: 136px;
   margin-bottom: 20px;
 }
 .main-slider__title {
@@ -164,9 +164,6 @@ body {
 .сaesars-сipher {
   min-height: 600px;
   background-color: #B8A5FF;
-  display: flex;
-  align-items: center;
-  margin-bottom: 48px;
 }
 .сaesars-сipher__container {
   display: flex;
@@ -207,7 +204,6 @@ body {
 }
 .vigener-cipher__container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   -moz-column-gap: 240px;
        column-gap: 240px;
@@ -235,6 +231,44 @@ body {
 }
 .vigener-cipher__button:hover::after {
   background: url("../icons/ArrowRight11.svg");
+}
+
+.atbash-cipher {
+  min-height: 500px;
+  background-color: #B8A5FF;
+}
+.atbash-cipher__container {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 135px;
+       column-gap: 135px;
+}
+.atbash-cipher__right-part {
+  align-self: flex-start;
+}
+.atbash-cipher__title {
+  margin-bottom: 60px;
+  color: #FFFFF0;
+  text-align: right;
+}
+.atbash-cipher__text {
+  color: #FFFFF0;
+  margin-bottom: 60px;
+}
+.atbash-cipher__button {
+  border: 1px solid #FFFFF0;
+  color: #FFFFF0;
+}
+.atbash-cipher__button::after {
+  background: url("../icons/ArrowRight11.svg");
+}
+.atbash-cipher__button:hover {
+  background-color: #FFFFF0;
+  color: #B8A5FF;
+  border: none;
+}
+.atbash-cipher__button:hover::after {
+  background: url("../icons/ArrowRight12.svg");
 }
 
 .title {
