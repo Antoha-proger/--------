@@ -14,7 +14,7 @@
         <div class="container header__container">
             <nav class="navbar navbar-expand-md header__navbar">
                 <div class="container-fluid">
-                  <a class="navbar-brand header__logo logo" href="#">Шифрование</a>
+                  <a class="navbar-brand header__logo logo" href="index.html">Шифрование</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
                     <!-- <span class="navbar-toggle-btn"></span> -->
                     <img src="icons/Menu_Duo_LG.svg" alt="" width="30" height="30">
@@ -29,13 +29,19 @@
                           Алгоритмы шифрования
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Шифр Цезаря</a></li>
-                          <li><a class="dropdown-item" href="#">Шифр Виженера</a></li>
-                          <li><a class="dropdown-item" href="#">Шифр Атбаш</a></li>
+                          <li><a class="dropdown-item" href="ceasar.html">Шифр Цезаря</a></li>
+                          <li><a class="dropdown-item" href="vigener.html">Шифр Виженера</a></li>
+                          <li><a class="dropdown-item" href="atbash.html">Шифр Атбаш</a></li>
                         </ul>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">О сайте</a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          О сайте
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="author.html">Об авторе</a></li>
+                          <li><a class="dropdown-item" href="instruction.html">Инструкция</a></li>
+                        </ul>
                       </li>
                     </ul>
                   </div>
@@ -45,6 +51,7 @@
     </header>
 
     <main class="main">
+      <!-- Основная часть -->
       <section class="main-part">
         <div class="container main-part__container">
           <div class="main-part__left-part">
@@ -58,7 +65,7 @@
           </div>
         </div>
       </section>
-
+      <!-- Слайдер -->
       <section class="main-slider" id="slider">
         <div class="container main-slider__container">
           <h2 class="main-slider__title title" id="popular-algorithms">Популярные алгоритмы</h2>
@@ -109,7 +116,7 @@
           </div>
         </div>
       </section>
-
+      <!-- Блок шифра Цезаря -->
       <section class="сaesars-сipher">
         <div class="container сaesars-сipher__container">
           <div class="сaesars-сipher__left-part">
@@ -120,24 +127,24 @@
             <p class="сaesars-сipher__text text">один из древнейших шифров. При шифровании каждый символ заменяется другим, отстоящим от него в алфавите на фиксированное число позиций.<br>
             <br>
               Шифр назван в честь римского императора Гая Юлия Цезаря, использовавшего его для секретной переписки. Естественным развитием шифра Цезаря стал шифр Виженера.</p>
-              <button class="сaesars-сipher__button button" type="button">Использовать шифр</button>
+              <a class="сaesars-сipher__button button" type="button" href="ceasar.html">Использовать шифр</a>
           </div>
         </div>
       </section>
-
+      <!-- Блок шифра Виженера -->
       <section class="vigener-cipher">
         <div class="container vigener-cipher__container">
           <div class="vigener-cipher__right-part">
             <h2 class="vigener-cipher__title title">Шифр Виженера</h2>
             <p class="vigener-cipher__text text">Этот метод является простой формой многоалфавитной замены. Шифр Виженера изобретался многократно. Впервые этот метод описал Джованни-Баттиста Беллазо в 1553 году , однако в 19 веке получил имя Блеза Виженера , швейцарского дипломата. Метод прост для понимания и реализации, он является недоступным для простых методов криптоанализа.</p>
-              <button class="vigener-cipher__button button" type="button">Использовать шифр</button>
+              <a class="vigener-cipher__button button" type="button" href="vigener.html">Использовать шифр</a>
             </div>
             <div class="vigener-cipher__left-part">
               <img src="img/vigener-img.png" alt="Виженер" width="358" height="461">
             </div>
         </div>
       </section>
-
+      <!-- Блок Шифра Атбаш -->
       <section class="atbash-cipher">
         <div class="container atbash-cipher__container">
           <div class="atbash-cipher__left-part">
@@ -146,11 +153,39 @@
           <div class="atbash-cipher__right-part">
             <h2 class="atbash-cipher__title title">Шифр Атбаш</h2>
             <p class="atbash-cipher__text text">Шифр простой замены, использованный для еврейского алфавита и получивший оттуда свое название. Шифрование происходит заменой первой буквы алфавита на последнюю, второй на предпоследнюю.</p>
-              <button class="atbash-cipher__button button" type="button">Использовать шифр</button>
+              <a class="atbash-cipher__button button" type="button" href="atbash.html">Использовать шифр</a>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__social-media-block">
+          <h2 class="footer__logo logo">Шифрование</h2>
+          <ul class="footer__social-media-list">
+            <li class="footer__social-media-item"><a href="https://t.me/gibon22"><img src="icons/telegram-violet.svg" alt=""></a></li>
+            <li class="footer__social-media-item"><a href="https://github.com/Antoha-proger"><img src="icons/github-violet.svg" alt=""></a></li>
+            <li class="footer__social-media-item"><a href="mailto:kobeleva166@gmail.com"><img src="icons/gmail-violet.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="footer__algorithm-block">
+          <ul class="footer__algorithm-list footer-list">
+            <li class="footer__algorithm-title footer-title">Алгоритмы шифрования</li>
+            <li class="footer__algorithm-item footer-item"><a href="ceasar.html">Шифр Цезаря</a></li>
+            <li class="footer__algorithm-item footer-item"><a href="vigener.html">Шифр Виженера</a></li>
+            <li class="footer__algorithm-item footer-item"><a href="atbash.html">Шифр Атбаш</a></li>
+          </ul>
+        </div>
+        <div class="footer__about-block">
+          <ul class="footer__about-list footer-list">
+            <li class="footer__about-title footer-title">О сайте</li>
+            <li class="footer__about-item footer-item"><a href="author.html">Об авторе</a></li>
+            <li class="footer__about-item footer-item"><a href="instruction.html">Инструкция</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

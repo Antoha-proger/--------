@@ -271,6 +271,27 @@ body {
   background: url("../icons/ArrowRight12.svg");
 }
 
+.footer__container {
+  padding-top: 40px;
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 180px;
+       column-gap: 180px;
+}
+.footer__logo {
+  color: #B8A5FF;
+  margin-bottom: 20px;
+  pointer-events: none;
+}
+.footer__social-media-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  -moz-column-gap: 46px;
+       column-gap: 46px;
+}
+
 .title {
   font-size: 36px;
   font-weight: bold;
@@ -281,6 +302,9 @@ body {
 }
 
 .button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
   position: relative;
   width: 261px;
   height: 60px;
@@ -296,6 +320,31 @@ body {
   width: 35px;
   height: 35px;
   top: 18%;
+}
+
+.footer-title {
+  color: #B8A5FF;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-item {
+  margin-bottom: 10px;
+}
+.footer-item a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #D9D9D9;
+}
+.footer-item a:hover {
+  color: #694CD2;
+  transition: 0.3s;
+}
+
+.footer-list {
+  padding: 0;
+  list-style: none;
 }
 
 @media (max-width: 576px) {

@@ -198,7 +198,7 @@ body
             border: none
         &:hover::after
             background: url("../icons/ArrowRight11.svg")
-
+// Шифр Атбаш
 .atbash-cipher
     min-height: 500px
     background-color: $base-color-violet
@@ -228,6 +228,25 @@ body
         &:hover::after
             background: url("../icons/ArrowRight12.svg")
 
+.footer
+    &__container
+        padding-top: 40px
+        min-height: 200px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 180px
+    &__logo
+        color: $base-color-violet
+        margin-bottom: 20px
+        pointer-events: none
+    &__social-media-list
+        padding: 0
+        list-style: none
+        display: flex
+        column-gap: 46px
+
+
+
 
 .title
     font-size: 36px
@@ -237,6 +256,9 @@ body
     font-size: 16px
 
 .button
+    text-decoration: none
+    display: flex
+    align-items: center
     position: relative
     width: 261px
     height: 60px
@@ -252,8 +274,25 @@ body
         height: 35px
         top: 18%
         
-    
+.footer-title
+    color: $base-color-violet
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 15px
 
+.footer-item
+     margin-bottom: 10px
+     a
+        text-decoration: none
+        font-size: 16px
+        color: #D9D9D9
+        &:hover
+            color: $base-button-violet-color-hover
+            transition: 0.3s
+
+.footer-list
+    padding: 0
+    list-style: none
 
 @media (max-width: 576px)
     .container
