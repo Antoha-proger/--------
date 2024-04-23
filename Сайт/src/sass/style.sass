@@ -43,6 +43,7 @@ body
 .dropdown-menu
     background-color: $base-color-violet
     color: $base-color-white
+    padding-left: 8px
     border: none
     padding-top: 30px
     padding-bottom: 30px
@@ -70,12 +71,7 @@ body
         color: $base-color-active
         box-shadow: none
     &:active
-        color: $base-color-active
-
-
-.dropdown-menu
-    padding-left: 8px
-
+        color: $base-color-active   
 .dropdown-item
     display: inline
     &:hover
@@ -102,12 +98,11 @@ body
     &__text
         color: $base-color-white
         margin: 0
-
     &__right-part
         align-self: flex-end
         img
-            width: 34.75rem
-            height: 31.875rem
+            width: 556px
+            height: 510px
 
 // Слайдер
 .main-slider
@@ -142,15 +137,23 @@ body
 
 // Шифр Цезаря
 .сaesars-сipher
-    min-height: 600px
+    min-height: 548px
     background-color: $base-color-violet
     &__container
         display: flex
         // align-items: center
         justify-content: space-between
         column-gap: 150px
+        align-items: center
+        margin-bottom: 50px
+    &__left-part
+        // width: 50%
+        img
+            width: 530px
+            height: 452px
     &__right-part
         align-self: flex-start
+        // width: 50%
     &__title
         margin-bottom: 60px
         color: $base-color-white
@@ -172,7 +175,7 @@ body
 
 // Шифр Виженера
 .vigener-cipher
-    min-height: 500px
+    min-height: 450px
     // display: flex
     // align-items: center
     &__container
@@ -180,6 +183,12 @@ body
         // align-items: center
         justify-content: space-between
         column-gap: 240px
+        align-items: center
+        // margin-bottom: 50px
+    &__left-part
+        img
+            width: 279px
+            height: 359px
     &__title
         margin-bottom: 60px
         color: $base-color-violet
@@ -190,6 +199,7 @@ body
     &__button
         border: 1px solid $base-color-violet
         color: $base-color-violet
+        
         &::after
             background: url("../icons/ArrowRight12.svg")
         &:hover
@@ -207,6 +217,12 @@ body
         // align-items: center
         justify-content: space-between
         column-gap: 135px
+        align-items: center
+       
+    &__left-part
+        img
+            width: 453px
+            height: 330px
     &__right-part
         align-self: flex-start
     &__title
@@ -234,7 +250,8 @@ body
         min-height: 200px
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        column-gap: 180px
+        // column-gap: 180px
+        justify-content: space-between
     &__logo
         color: $base-color-violet
         margin-bottom: 20px
@@ -244,9 +261,10 @@ body
         list-style: none
         display: flex
         column-gap: 46px
-
-
-
+    &__algorithm-block
+        justify-self: end
+    &__about-block
+        justify-self: end
 
 .title
     font-size: 36px
@@ -266,6 +284,7 @@ body
     padding-left: 20px
     text-align: left
     transition: 0.4s
+    margin-bottom: 50px
     &::after
         content: ""
         position: absolute
@@ -294,11 +313,189 @@ body
     padding: 0
     list-style: none
 
-@media (max-width: 576px)
+
+    
+
+@media (max-width: 991px)
     .container
-        width: 100%
+        max-width: 750px
+        padding-top: 40px
+    .header
+        &__container
+            min-height: 60px
+            margin: 0 auto
+            padding-top: 15px
+    .header .logo
+        font-size: 24px
+        margin-right: 34px
+    .navbar-nav
+        column-gap: 0.938rem
+    .nav-item
+        padding: 0
+    .nav-link
+        font-size: 12px
+    .dropdown-menu
+        padding: 0
+    .dropdown-item
+        font-size: 12px
+
+    .main-part
+        &__container
+            min-height: 440px
+            column-gap: 15px
+
+        &__right-part img 
+            width: 17.563rem
+            height: 16.938rem
+        &__title
+            margin-bottom: 25px
+        &__text
+            min-width: 350px
+
+    .main-slider
+        &__title
+            margin-bottom: 45px
+        &__content
+            column-gap: 60px
+            min-height: 300px
+            img
+                width: 200px
+                height: 226px
+        &__algorithm-name
+            font-size: 24px
+            margin-bottom: 20px
+        &__algorithm_descr
+            font-size: 14px
+        
+    .сaesars-сipher
+        min-height: 400px
+        &__container
+            margin-bottom: 0
+            column-gap: 45px
+        &__left-part
+            img
+                width: 289px
+                height: 246px
+        &__title
+            margin-bottom: 40px
+        &__text
+            margin-bottom: 40px
+
+    .vigener-cipher
+        min-height: 350px
+        &__container
+            column-gap: 100px
+        &__left-part
+            img
+                width: 250px
+                height: 322px
+        &__title
+            margin-bottom: 40px
+        &__text
+            margin-bottom: 40px
+
+    .atbash-cipher
+        min-height: 300px
+        &__container
+            column-gap: 100px
+        &__left-part
+            img
+                width: 300px
+                height: 218px
+        &__title
+            margin-bottom: 40px
+        &__text
+            margin-bottom: 40px
+
+    .footer
+        &__logo
+            font-size: 20px
+        &__social-media-list
+            column-gap: 24px
+        &__social-media-item
+            img
+                width: 30px
+                height: 30px
+
+    .title 
+        font-size: 20px
+    .text 
+        font-size: 13px
+        min-width: 300px
+    .button
+        width: 200px
+        height: 50px
+        font-size: 14px
+        padding-left: 0px
+        justify-content: center
+        &::after
+            content: none
+
+    .footer-title
+        font-size: 16px
+    .footer-item
+        a
+            font-size: 14px
+
+@media (max-width: 767px)
+    .container
+        max-width: 100%
     .nav-link
         display: inline
-
     .nav-item:not(:last-child)
         margin-bottom: 20px
+
+    .main-part
+        &__right-part
+            display: none
+        &__container 
+            min-height: 320px
+            align-items: start
+
+    .main-slider
+        &__content
+            min-height: 200px
+            img
+                display: none
+        &__title
+            text-align: center
+            margin-bottom: 0
+        &__algorithm-name
+            text-align: center
+
+    .сaesars-сipher
+        min-height: 300px
+        &__left-part
+            display: none
+        &__title
+            text-align: left
+        // &__text
+        //     max-width: 350px
+
+    .vigener-cipher
+        &__left-part
+            display: none
+
+    .atbash-cipher
+        &__title
+            text-align: left
+        &__left-part
+            display: none
+
+    .footer
+        &__container
+            grid-template-columns: repeat(1, 1fr)
+            row-gap: 30px
+        &__algorithm-block
+            justify-self: start
+        &__about-block
+            justify-self: start
+
+// @media (max-width: 787px)
+//     .container
+//         max-width: 100%
+//     .nav-link
+//         display: inline
+
+//     .nav-item:not(:last-child)
+//         margin-bottom: 20px

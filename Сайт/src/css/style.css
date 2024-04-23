@@ -44,6 +44,7 @@ body {
 .dropdown-menu {
   background-color: #B8A5FF;
   color: #FFFFF0;
+  padding-left: 8px;
   border: none;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -78,10 +79,6 @@ body {
 }
 .navbar .navbar-nav .nav-item .nav-link:active, .logo:active, .dropdown-item:active {
   color: #FFD000;
-}
-
-.dropdown-menu {
-  padding-left: 8px;
 }
 
 .dropdown-item {
@@ -121,8 +118,8 @@ body {
   align-self: flex-end;
 }
 .main-part__right-part img {
-  width: 34.75rem;
-  height: 31.875rem;
+  width: 556px;
+  height: 510px;
 }
 
 .main-slider__container {
@@ -162,7 +159,7 @@ body {
 }
 
 .сaesars-сipher {
-  min-height: 600px;
+  min-height: 548px;
   background-color: #B8A5FF;
 }
 .сaesars-сipher__container {
@@ -170,6 +167,12 @@ body {
   justify-content: space-between;
   -moz-column-gap: 150px;
        column-gap: 150px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.сaesars-сipher__left-part img {
+  width: 530px;
+  height: 452px;
 }
 .сaesars-сipher__right-part {
   align-self: flex-start;
@@ -200,13 +203,18 @@ body {
 }
 
 .vigener-cipher {
-  min-height: 500px;
+  min-height: 450px;
 }
 .vigener-cipher__container {
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 240px;
        column-gap: 240px;
+  align-items: center;
+}
+.vigener-cipher__left-part img {
+  width: 279px;
+  height: 359px;
 }
 .vigener-cipher__title {
   margin-bottom: 60px;
@@ -242,6 +250,11 @@ body {
   justify-content: space-between;
   -moz-column-gap: 135px;
        column-gap: 135px;
+  align-items: center;
+}
+.atbash-cipher__left-part img {
+  width: 453px;
+  height: 330px;
 }
 .atbash-cipher__right-part {
   align-self: flex-start;
@@ -276,8 +289,7 @@ body {
   min-height: 200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 180px;
-       column-gap: 180px;
+  justify-content: space-between;
 }
 .footer__logo {
   color: #B8A5FF;
@@ -290,6 +302,12 @@ body {
   display: flex;
   -moz-column-gap: 46px;
        column-gap: 46px;
+}
+.footer__algorithm-block {
+  justify-self: end;
+}
+.footer__about-block {
+  justify-self: end;
 }
 
 .title {
@@ -312,6 +330,7 @@ body {
   padding-left: 20px;
   text-align: left;
   transition: 0.4s;
+  margin-bottom: 50px;
 }
 .button::after {
   content: "";
@@ -347,14 +366,213 @@ body {
   list-style: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .container {
-    width: 100%;
+    max-width: 750px;
+    padding-top: 40px;
+  }
+  .header__container {
+    min-height: 60px;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .header .logo {
+    font-size: 24px;
+    margin-right: 34px;
+  }
+  .navbar-nav {
+    -moz-column-gap: 0.938rem;
+         column-gap: 0.938rem;
+  }
+  .nav-item {
+    padding: 0;
+  }
+  .nav-link {
+    font-size: 12px;
+  }
+  .dropdown-menu {
+    padding: 0;
+  }
+  .dropdown-item {
+    font-size: 12px;
+  }
+  .main-part__container {
+    min-height: 440px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .main-part__right-part img {
+    width: 17.563rem;
+    height: 16.938rem;
+  }
+  .main-part__title {
+    margin-bottom: 25px;
+  }
+  .main-part__text {
+    min-width: 350px;
+  }
+  .main-slider__title {
+    margin-bottom: 45px;
+  }
+  .main-slider__content {
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    min-height: 300px;
+  }
+  .main-slider__content img {
+    width: 200px;
+    height: 226px;
+  }
+  .main-slider__algorithm-name {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .main-slider__algorithm_descr {
+    font-size: 14px;
+  }
+  .сaesars-сipher {
+    min-height: 400px;
+  }
+  .сaesars-сipher__container {
+    margin-bottom: 0;
+    -moz-column-gap: 45px;
+         column-gap: 45px;
+  }
+  .сaesars-сipher__left-part img {
+    width: 289px;
+    height: 246px;
+  }
+  .сaesars-сipher__title {
+    margin-bottom: 40px;
+  }
+  .сaesars-сipher__text {
+    margin-bottom: 40px;
+  }
+  .vigener-cipher {
+    min-height: 350px;
+  }
+  .vigener-cipher__container {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+  .vigener-cipher__left-part img {
+    width: 250px;
+    height: 322px;
+  }
+  .vigener-cipher__title {
+    margin-bottom: 40px;
+  }
+  .vigener-cipher__text {
+    margin-bottom: 40px;
+  }
+  .atbash-cipher {
+    min-height: 300px;
+  }
+  .atbash-cipher__container {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+  .atbash-cipher__left-part img {
+    width: 300px;
+    height: 218px;
+  }
+  .atbash-cipher__title {
+    margin-bottom: 40px;
+  }
+  .atbash-cipher__text {
+    margin-bottom: 40px;
+  }
+  .footer__logo {
+    font-size: 20px;
+  }
+  .footer__social-media-list {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+  .footer__social-media-item img {
+    width: 30px;
+    height: 30px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 13px;
+    min-width: 300px;
+  }
+  .button {
+    width: 200px;
+    height: 50px;
+    font-size: 14px;
+    padding-left: 0px;
+    justify-content: center;
+  }
+  .button::after {
+    content: none;
+  }
+  .footer-title {
+    font-size: 16px;
+  }
+  .footer-item a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
   }
   .nav-link {
     display: inline;
   }
   .nav-item:not(:last-child) {
     margin-bottom: 20px;
+  }
+  .main-part__right-part {
+    display: none;
+  }
+  .main-part__container {
+    min-height: 320px;
+    align-items: start;
+  }
+  .main-slider__content {
+    min-height: 200px;
+  }
+  .main-slider__content img {
+    display: none;
+  }
+  .main-slider__title {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .main-slider__algorithm-name {
+    text-align: center;
+  }
+  .сaesars-сipher {
+    min-height: 300px;
+  }
+  .сaesars-сipher__left-part {
+    display: none;
+  }
+  .сaesars-сipher__title {
+    text-align: left;
+  }
+  .vigener-cipher__left-part {
+    display: none;
+  }
+  .atbash-cipher__title {
+    text-align: left;
+  }
+  .atbash-cipher__left-part {
+    display: none;
+  }
+  .footer__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+  .footer__algorithm-block {
+    justify-self: start;
+  }
+  .footer__about-block {
+    justify-self: start;
   }
 }/*# sourceMappingURL=style.css.map */
