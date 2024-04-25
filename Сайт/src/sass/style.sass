@@ -515,5 +515,39 @@ body
         display: flex
         justify-content: center
         margin-bottom: 75px
+        min-height: 500px
     &__videoplayer
         width: 80%
+        border-radius: 20px
+
+.switch-buttons
+    display: inline-block
+    overflow: hidden
+    display: flex
+    justify-content: center
+    & input[type=radio]
+        display: none
+    & label
+        display: inline-block
+        cursor: pointer
+        padding: 5px 111px
+        border: 1px solid $base-color-violet
+        color: $base-color-violet
+        font-size: 24px
+        width: 400px
+    & .switch-item:first-child label
+        border-right: none
+    & input[type=radio]:checked + label 
+        background-color: $base-color-violet
+        color: $base-color-white
+        transition: 0.2s all
+    & label:hover
+        color: $base-button-violet-color-hover
+        
+         
+
+.switch-item
+    display: inline-block
+    float: left
+    
+    

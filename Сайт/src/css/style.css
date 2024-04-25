@@ -582,7 +582,44 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 75px;
+  min-height: 500px;
 }
 .player__videoplayer {
   width: 80%;
+  border-radius: 20px;
+}
+
+.switch-buttons {
+  display: inline-block;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.switch-buttons input[type=radio] {
+  display: none;
+}
+.switch-buttons label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 111px;
+  border: 1px solid #B8A5FF;
+  color: #B8A5FF;
+  font-size: 24px;
+  width: 400px;
+}
+.switch-buttons .switch-item:first-child label {
+  border-right: none;
+}
+.switch-buttons input[type=radio]:checked + label {
+  background-color: #B8A5FF;
+  color: #FFFFF0;
+  transition: 0.2s all;
+}
+.switch-buttons label:hover {
+  color: #694CD2;
+}
+
+.switch-item {
+  display: inline-block;
+  float: left;
 }/*# sourceMappingURL=style.css.map */
