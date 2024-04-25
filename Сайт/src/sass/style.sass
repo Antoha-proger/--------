@@ -16,8 +16,8 @@ body
 
 .container
     max-width: 1140px
-    padding-top: 83px
 
+// Главная страница
 // Шапка
 .header
     background-color: $base-color-violet
@@ -91,6 +91,7 @@ body
         display: flex
         align-items: center
         column-gap: 34px
+        margin-bottom: 83px
     &__title
         color: $base-color-white
         margin: 0
@@ -141,11 +142,11 @@ body
     background-color: $base-color-violet
     &__container
         display: flex
-        // align-items: center
         justify-content: space-between
         column-gap: 150px
         align-items: center
-        margin-bottom: 50px
+        // margin-bottom: 50px
+        padding-top: 83px
     &__left-part
         // width: 50%
         img
@@ -176,15 +177,12 @@ body
 // Шифр Виженера
 .vigener-cipher
     min-height: 450px
-    // display: flex
-    // align-items: center
     &__container
         display: flex
-        // align-items: center
         justify-content: space-between
         column-gap: 240px
         align-items: center
-        // margin-bottom: 50px
+        padding-top: 83px
     &__left-part
         img
             width: 279px
@@ -208,17 +206,17 @@ body
             border: none
         &:hover::after
             background: url("../icons/ArrowRight11.svg")
+
 // Шифр Атбаш
 .atbash-cipher
     min-height: 500px
     background-color: $base-color-violet
     &__container
         display: flex
-        // align-items: center
         justify-content: space-between
         column-gap: 135px
         align-items: center
-       
+        padding-top: 83px
     &__left-part
         img
             width: 453px
@@ -244,6 +242,7 @@ body
         &:hover::after
             background: url("../icons/ArrowRight12.svg")
 
+// Футер
 .footer
     &__container
         padding-top: 40px
@@ -266,13 +265,16 @@ body
     &__about-block
         justify-self: end
 
+// Заголовки
 .title
     font-size: 36px
     font-weight: bold
 
+// Обычный текст
 .text
     font-size: 16px
 
+// Кнопки
 .button
     text-decoration: none
     display: flex
@@ -292,13 +294,15 @@ body
         width: 35px
         height: 35px
         top: 18%
-        
+
+// Заголовки футера 
 .footer-title
     color: $base-color-violet
     font-size: 18px
     font-weight: 600
     margin-bottom: 15px
 
+// Элементы футера
 .footer-item
      margin-bottom: 10px
      a
@@ -309,17 +313,18 @@ body
             color: $base-button-violet-color-hover
             transition: 0.3s
 
+// Списки футера
 .footer-list
     padding: 0
     list-style: none
 
-
-    
-
+// Главная страница - разрешение 991px
 @media (max-width: 991px)
+    // Контейнер
     .container
         max-width: 750px
         padding-top: 40px
+    // Шапка
     .header
         &__container
             min-height: 60px
@@ -339,6 +344,7 @@ body
     .dropdown-item
         font-size: 12px
 
+    // Главная часть
     .main-part
         &__container
             min-height: 440px
@@ -352,6 +358,7 @@ body
         &__text
             min-width: 350px
 
+    // Слайдер
     .main-slider
         &__title
             margin-bottom: 45px
@@ -367,6 +374,7 @@ body
         &__algorithm_descr
             font-size: 14px
         
+    // Шифр Цезаря
     .сaesars-сipher
         min-height: 400px
         &__container
@@ -381,6 +389,7 @@ body
         &__text
             margin-bottom: 40px
 
+    // Шифр Виженера
     .vigener-cipher
         min-height: 350px
         &__container
@@ -394,6 +403,7 @@ body
         &__text
             margin-bottom: 40px
 
+    // Шифр Атбаш
     .atbash-cipher
         min-height: 300px
         &__container
@@ -407,6 +417,7 @@ body
         &__text
             margin-bottom: 40px
 
+    // Футер
     .footer
         &__logo
             font-size: 20px
@@ -437,7 +448,9 @@ body
         a
             font-size: 14px
 
+// Главная страница - разрешение 767px
 @media (max-width: 767px)
+    // Контейнер
     .container
         max-width: 100%
     .nav-link
@@ -445,6 +458,7 @@ body
     .nav-item:not(:last-child)
         margin-bottom: 20px
 
+    // Главная часть
     .main-part
         &__right-part
             display: none
@@ -452,6 +466,7 @@ body
             min-height: 320px
             align-items: start
 
+    // Слайдер
     .main-slider
         &__content
             min-height: 200px
@@ -463,25 +478,27 @@ body
         &__algorithm-name
             text-align: center
 
+    // Шифр Цезаря
     .сaesars-сipher
         min-height: 300px
         &__left-part
             display: none
         &__title
             text-align: left
-        // &__text
-        //     max-width: 350px
-
+    
+    // Шифр Виженера
     .vigener-cipher
         &__left-part
             display: none
 
+    // Шифр Атбаш
     .atbash-cipher
         &__title
             text-align: left
         &__left-part
             display: none
 
+    // Футер
     .footer
         &__container
             grid-template-columns: repeat(1, 1fr)
@@ -491,11 +508,12 @@ body
         &__about-block
             justify-self: start
 
-// @media (max-width: 787px)
-//     .container
-//         max-width: 100%
-//     .nav-link
-//         display: inline
-
-//     .nav-item:not(:last-child)
-//         margin-bottom: 20px
+// Страница - Шифр Цезаря
+// Видеоплеер
+.player
+    &__container
+        display: flex
+        justify-content: center
+        margin-bottom: 75px
+    &__videoplayer
+        width: 80%

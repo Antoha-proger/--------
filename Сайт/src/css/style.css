@@ -10,7 +10,6 @@ body {
 
 .container {
   max-width: 1140px;
-  padding-top: 83px;
 }
 
 .header {
@@ -104,6 +103,7 @@ body {
   align-items: center;
   -moz-column-gap: 34px;
        column-gap: 34px;
+  margin-bottom: 83px;
 }
 .main-part__title {
   color: #FFFFF0;
@@ -168,7 +168,7 @@ body {
   -moz-column-gap: 150px;
        column-gap: 150px;
   align-items: center;
-  margin-bottom: 50px;
+  padding-top: 83px;
 }
 .сaesars-сipher__left-part img {
   width: 530px;
@@ -211,6 +211,7 @@ body {
   -moz-column-gap: 240px;
        column-gap: 240px;
   align-items: center;
+  padding-top: 83px;
 }
 .vigener-cipher__left-part img {
   width: 279px;
@@ -251,6 +252,7 @@ body {
   -moz-column-gap: 135px;
        column-gap: 135px;
   align-items: center;
+  padding-top: 83px;
 }
 .atbash-cipher__left-part img {
   width: 453px;
@@ -575,4 +577,12 @@ body {
   .footer__about-block {
     justify-self: start;
   }
+}
+.player__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+.player__videoplayer {
+  width: 80%;
 }/*# sourceMappingURL=style.css.map */
