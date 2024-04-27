@@ -368,6 +368,31 @@ body {
   list-style: none;
 }
 
+.btn-up {
+  position: fixed;
+  bottom: 70px;
+  right: 40px;
+  background-color: #B8A5FF;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn-up::before {
+  content: "";
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+  background-image: url("../icons/ArrowUp.svg");
+}
+.btn-up-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 991px) {
   .container {
     max-width: 750px;
@@ -677,8 +702,7 @@ body {
 .ceasar-footer {
   background-color: #694CD2;
 }
-
-.footer__logo {
+.ceasar-footer__logo {
   color: #FFFFF0;
 }
 

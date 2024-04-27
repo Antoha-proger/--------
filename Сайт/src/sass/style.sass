@@ -252,6 +252,7 @@ body
         // column-gap: 180px
         justify-content: space-between
     &__logo
+        // background-color: $base-color-violet
         color: $base-color-violet
         margin-bottom: 20px
         pointer-events: none
@@ -317,6 +318,33 @@ body
 .footer-list
     padding: 0
     list-style: none
+
+.btn-up
+    position: fixed
+    bottom: 70px
+    right: 40px
+    background-color: $base-radio-violet-color-hover
+    width: 50px
+    height: 50px
+    display: none
+    // display: flex
+    // justify-content: center
+    // align-items: center
+    border-radius: 50px
+    cursor: pointer
+    &::before
+        content: ""
+        background: transparent no-repeat center center
+        background-size: 100% 100%
+        width: 24px
+        height: 24px
+        background-image: url("../icons/ArrowUp.svg")
+    
+    &-show
+        display: flex
+        justify-content: center
+        align-items: center
+
 
 // Главная страница - разрешение 991px
 @media (max-width: 991px)
@@ -597,8 +625,8 @@ body
 
 .ceasar-footer
     background-color: $base-color-violet
-.footer__logo
-    color: $base-color-white
+    &__logo
+        color: $base-color-white
 .footer-title-violet
     color: $base-color-white
     font-size: 18px
