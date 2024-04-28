@@ -77,24 +77,31 @@
                 </div>
                 <!-- Поле вводе текста для шифрования -->
                 <div class="encryption__input-block">
-                    <textarea class="enctyption__textarea textarea" name="input-text" id="input-text" cols="30" rows="10" wrap="hard"></textarea>
-                    <div class="encryption__button-block">
-                        <button class="encryption__file-load-btn encrypt-button" 
-                        type="button">Вставить в файл</button>
-                        <button class="encryption__encrypt-btn encrypt-button" id="encrypt-decrypt-btn" type="button">Зашифровать</button>
-                    </div>
+                  <div class="copy-button input-button" type="button">
+                  </div>
+                  <textarea class="enctyption__textarea textarea" name="input-text" id="input-text" cols="3" rows="10" wrap="hard"></textarea>
+                  <div class="encryption__button-block">
+                      <button class="encryption__file-load-btn encrypt-button" 
+                      type="button">Вставить в файл</button>
+                      <button class="encryption__encrypt-btn encrypt-button" id="encrypt-decrypt-btn" type="button">Зашифровать</button>
+                  </div>
                 </div>
                 <!-- Поле с зашифрованным текстом -->
                 <div class="encryption__output-block">
-                    <textarea class="enctyption__textarea textarea" name="output-text" id="output-text" cols="30" rows="10" wrap="hard"></textarea>
-                    <div class="encryption__button-block">
-                        <button class="encryption__file-save-btn encrypt-button" type="button">Сохранить в файл</button>
-                    </div>
+                  <div class="copy-button output-button" type="button">
+                  </div>
+                  <textarea class="enctyption__textarea textarea" name="output-text" id="output-text" cols="30" rows="10" wrap="hard"></textarea>
+                  <div class="encryption__button-block">
+                      <button class="encryption__file-save-btn encrypt-button" type="button">Сохранить в файл</button>
+                  </div>
                 </div>
             </div>
         </section>
 
         <div class="main__btn-up btn-up"></div>
+        <div class="copy-input-result">
+          <span>Copied!</span>
+        </div>
     </main>
 
     <footer class="ceasar-footer footer">

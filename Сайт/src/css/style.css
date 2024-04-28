@@ -561,6 +561,9 @@ body {
     min-height: 320px;
     align-items: start;
   }
+  .main-part__text {
+    margin-bottom: 30px;
+  }
   .main-slider__content {
     min-height: 200px;
   }
@@ -655,6 +658,7 @@ body {
   margin-bottom: 50px;
 }
 .encryption__input-block {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -666,6 +670,7 @@ body {
   justify-content: space-between;
 }
 .encryption__output-block {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -677,6 +682,7 @@ body {
 
 .textarea {
   width: 900px;
+  position: relative;
   height: 300px;
   resize: none;
   border: 1px solid #694CD2;
@@ -684,7 +690,53 @@ body {
   color: #694CD2;
   font-size: 18px;
 }
+.textarea:focus {
+  outline-color: #694CD2;
+}
 
+.copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 7.5em;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+}
+.copy-button::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../icons/Files.svg");
+}
+
+.copy-container {
+  text-align: center;
+}
+
+.copy-input-result {
+  display: none;
+}
+.copy-input-result_show {
+  margin: 0;
+  background-color: rgba(74, 74, 74, 0.8);
+  color: #FFFFF0;
+  display: inline-block;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  padding: 2px 40px;
+  animation: anim 0.3s forwards;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(150000%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
 .encrypt-button {
   padding: 16px 57px;
   display: flex;

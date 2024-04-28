@@ -2,9 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let user_text = document.querySelector('#input-text');
     const step = 3;
     let output = document.querySelector('#output-text');
-    let encrypt_button = document.querySelector('#encrypt-btn');
-    let decrypt_button = document.querySelector('#decrypt-btn');
-    // let encrypt_decrypt_btn = document.querySelector('#encrypt_decrypt_btn');
     let text_to_work;
     let pos;
 
@@ -144,15 +141,6 @@ window.addEventListener('DOMContentLoaded', () => {
         return result;
     }
 
-    // encrypt_button.addEventListener('click', function() {
-    //     text_to_work = user_text.value;
-    //     output.value = encrypt(text_to_work);
-    // });
-
-    // decrypt_button.addEventListener('click', function() {
-    //     text_to_work = user_text.value;
-    //     output.value = decrypt(text_to_work);
-    // })
 
     let encrypt_radio = document.querySelector('.encrypt-radio');
     let decrypt_radio = document.querySelector('.decrypt-radio');
@@ -170,8 +158,6 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     encrypt_decrypt_btn.addEventListener('click', () => {
-        let radio_encrypt = document.querySelector('#encrypt-radio');
-        let radio_decrypt = document.querySelector('#decrypt-radio');
 
         if (enc) {
             text_to_work = user_text.value;
@@ -181,4 +167,41 @@ window.addEventListener('DOMContentLoaded', () => {
             output.value = decrypt(text_to_work);
         }
     })
+
+    let copy_input = document.querySelector('.input-button');
+    let copy_notice = document.querySelector('.copy-input-result');
+
+    let copy_output = document.querySelector('.output-button');
+
+    copy_input.addEventListener('click', () => {
+        copy_text('input');
+    });
+
+    copy_output.addEventListener('click', () => {
+        copy_text('output');
+    })
+    
+
+    function copy_text(button){
+        let text;
+
+        switch (button) {
+            case 'input':
+                text = user_text.value;
+                break;
+            case 'output':
+                text = output.value;
+        }
+
+        navigator.clipboard.writeText(text).then(() => {
+            if (text) {
+                copy_notice.classList.add('copy-input-result_show');
+                setTimeout(() => {
+                    copy_notice.classList.remove('copy-input-result_show');
+                }, 2000);
+            }
+        })
+        
+    }
+
 })
