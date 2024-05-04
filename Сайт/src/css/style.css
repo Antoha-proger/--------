@@ -12,6 +12,14 @@ body {
   max-width: 1140px;
 }
 
+.violet {
+  background-color: #694CD2;
+}
+
+.main .content-center {
+  align-self: center;
+}
+
 .footer-title {
   color: #694CD2;
   font-size: 18px;
@@ -60,6 +68,154 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 261px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 20px;
+  text-align: left;
+  transition: 0.4s;
+  margin-bottom: 50px;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  top: 18%;
+}
+
+.switch-buttons {
+  display: inline-block;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.switch-buttons input[type=radio] {
+  display: none;
+}
+.switch-buttons label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 111px;
+  text-align: center;
+  border: 1px solid #694CD2;
+  color: #694CD2;
+  font-size: 24px;
+  width: 450px;
+}
+.switch-buttons .switch-item:first-child label {
+  border-right: none;
+}
+.switch-buttons input[type=radio]:checked + label {
+  background-color: #694CD2;
+  color: #FFFFF0;
+  transition: 0.2s all;
+}
+.switch-buttons label:hover {
+  color: #B8A5FF;
+}
+
+.switch-item {
+  display: inline-block;
+  float: left;
+}
+
+.textarea {
+  width: 900px;
+  position: relative;
+  height: 300px;
+  resize: none;
+  border: 1px solid #694CD2;
+  margin-bottom: 20px;
+  color: #694CD2;
+  font-size: 18px;
+}
+.textarea:focus {
+  outline-color: #694CD2;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 7.5em;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+}
+.copy-button::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../icons/Files.svg");
+}
+
+.copy-input-result {
+  display: none;
+}
+.copy-input-result_show {
+  margin: 0;
+  background-color: rgba(74, 74, 74, 0.8);
+  color: #FFFFF0;
+  display: inline-block;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  padding: 2px 40px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  animation: anim 0.3s forwards;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(150000%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.encrypt-button {
+  padding: 16px 57px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #694CD2;
+  color: #694CD2;
+  font-size: 20px;
+}
+.encrypt-button:hover {
+  background-color: #694CD2;
+  color: #FFFFF0;
+}
+
+.player__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  min-height: 500px;
+}
+.player__videoplayer {
+  width: 70%;
+  height: 500px;
+  border-radius: 20px;
 }
 
 .header {
@@ -166,10 +322,6 @@ body {
 }
 .main-part__right-part {
   align-self: flex-end;
-}
-.main-part__right-part img {
-  width: 556px;
-  height: 510px;
 }
 
 .main-slider__container {
@@ -362,85 +514,6 @@ body {
   justify-self: end;
 }
 
-.title {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.text {
-  font-size: 16px;
-}
-
-.button {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 261px;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0);
-  padding-left: 20px;
-  text-align: left;
-  transition: 0.4s;
-  margin-bottom: 50px;
-}
-.button::after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  width: 35px;
-  height: 35px;
-  top: 18%;
-}
-
-.player__container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-  min-height: 500px;
-}
-.player__videoplayer {
-  width: 70%;
-  height: 500px;
-  border-radius: 20px;
-}
-
-.switch-buttons {
-  display: inline-block;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-.switch-buttons input[type=radio] {
-  display: none;
-}
-.switch-buttons label {
-  display: inline-block;
-  cursor: pointer;
-  padding: 5px 111px;
-  text-align: center;
-  border: 1px solid #694CD2;
-  color: #694CD2;
-  font-size: 24px;
-  width: 450px;
-}
-.switch-buttons .switch-item:first-child label {
-  border-right: none;
-}
-.switch-buttons input[type=radio]:checked + label {
-  background-color: #694CD2;
-  color: #FFFFF0;
-  transition: 0.2s all;
-}
-.switch-buttons label:hover {
-  color: #B8A5FF;
-}
-
-.switch-item {
-  display: inline-block;
-  float: left;
-}
-
 .encryption__switch-buttons {
   margin-bottom: 50px;
 }
@@ -464,80 +537,6 @@ body {
   margin-bottom: 150px;
 }
 
-.textarea {
-  width: 900px;
-  position: relative;
-  height: 300px;
-  resize: none;
-  border: 1px solid #694CD2;
-  margin-bottom: 20px;
-  color: #694CD2;
-  font-size: 18px;
-}
-.textarea:focus {
-  outline-color: #694CD2;
-}
-
-.copy-button {
-  position: absolute;
-  top: 0.5em;
-  right: 7.5em;
-  z-index: 100;
-  width: 24px;
-  height: 24px;
-}
-.copy-button::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../icons/Files.svg");
-}
-
-.copy-container {
-  text-align: center;
-}
-
-.copy-input-result {
-  display: none;
-}
-.copy-input-result_show {
-  margin: 0;
-  background-color: rgba(74, 74, 74, 0.8);
-  color: #FFFFF0;
-  display: inline-block;
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  padding: 2px 40px;
-  animation: anim 0.3s forwards;
-}
-
-@keyframes anim {
-  0% {
-    transform: translateY(150000%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
-.encrypt-button {
-  padding: 16px 57px;
-  display: flex;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #694CD2;
-  color: #694CD2;
-  font-size: 20px;
-}
-.encrypt-button:hover {
-  background-color: #694CD2;
-  color: #FFFFF0;
-}
-
-.ceasar-footer {
-  background-color: #694CD2;
-}
 .ceasar-footer__logo {
   color: #FFFFF0;
 }

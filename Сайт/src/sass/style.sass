@@ -8,6 +8,7 @@ $base-font: "Vollkorn SC"
 $base-button-violet-color-hover: #694CD2
 $base-button-white-color-hover: #FFFFF0
 $base-radio-violet-color-hover: #B8A5FF
+// Общие стили
 *
     box-sizing: border-box
 
@@ -16,6 +17,12 @@ body
 
 .container
     max-width: 1140px
+
+.violet
+    background-color: $base-color-violet
+
+.main .content-center
+    align-self: center
 
 // Заголовки футера 
 .footer-title
@@ -62,6 +69,137 @@ body
         display: flex
         justify-content: center
         align-items: center
+
+// Заголовки
+.title
+    font-size: 36px
+    font-weight: bold
+
+// Обычный текст
+.text
+    font-size: 16px
+
+// Кнопки
+.button
+    text-decoration: none
+    display: flex
+    align-items: center
+    position: relative
+    width: 261px
+    height: 60px
+    background-color: rgba(0, 0, 0, 0) 
+    padding-left: 20px
+    text-align: left
+    transition: 0.4s
+    margin-bottom: 50px
+    &::after
+        content: ""
+        position: absolute
+        right: 20px
+        width: 35px
+        height: 35px
+        top: 18%
+
+// Кнопки перекючения режима шифрование/дешифрование
+.switch-buttons
+    display: inline-block
+    overflow: hidden
+    display: flex
+    justify-content: center
+    & input[type=radio]
+        display: none
+    & label
+        display: inline-block
+        cursor: pointer
+        padding: 5px 111px
+        text-align: center
+        border: 1px solid $base-color-violet
+        color: $base-color-violet
+        font-size: 24px
+        width: 450px
+    & .switch-item:first-child label
+        border-right: none
+    & input[type=radio]:checked + label 
+        background-color: $base-color-violet
+        color: $base-color-white
+        transition: 0.2s all
+    & label:hover
+        color: $base-radio-violet-color-hover
+        
+.switch-item
+    display: inline-block
+    float: left
+
+.textarea
+    width: 900px
+    position: relative
+    height: 300px
+    resize: none
+    border: 1px solid $base-color-violet
+    margin-bottom: 20px
+    color: $base-color-violet
+    font-size: 18px
+    &:focus
+        outline-color: $base-color-violet
+
+.copy-button
+    position: absolute
+    top: 0.5em
+    right: 7.5em
+    z-index: 100
+    width: 24px
+    height: 24px
+    &::before
+        content: ""
+        display: block
+        width: 24px
+        height: 24px
+        background-image: url("../icons/Files.svg")
+    
+.copy-input-result
+    display: none
+    &_show
+        margin: 0
+        background-color: rgba(74, 74, 74, 0.8)
+        color: $base-color-white
+        display: inline-block
+        position: fixed
+        bottom: 50px
+        left: 50%
+        padding: 2px 40px
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+        animation: anim 0.3s forwards
+
+@keyframes anim
+    0%
+        transform: translateY(150000%)
+    100%
+        transform: translateY(100%)
+
+.encrypt-button
+    padding: 16px 57px
+    display: flex
+    align-items: center
+    background-color: rgba(0, 0, 0, 0) 
+    border: 1px solid $base-color-violet
+    color: $base-color-violet
+    font-size: 20px
+    &:hover
+        background-color: $base-button-violet-color-hover 
+        color: $base-color-white
+
+// Видеоплеер
+.player
+    &__container
+        display: flex
+        justify-content: center
+        margin-bottom: 100px
+        min-height: 500px
+    &__videoplayer
+        width: 70%
+        height: 500px
+        border-radius: 20px
 
 // Главная страница
 // Шапка
@@ -147,9 +285,6 @@ body
         margin: 0
     &__right-part
         align-self: flex-end
-        img
-            width: 556px
-            height: 510px
 
 // Слайдер
 .main-slider
@@ -312,81 +447,7 @@ body
     &__about-block
         justify-self: end
 
-// Заголовки
-.title
-    font-size: 36px
-    font-weight: bold
-
-// Обычный текст
-.text
-    font-size: 16px
-
-// Кнопки
-.button
-    text-decoration: none
-    display: flex
-    align-items: center
-    position: relative
-    width: 261px
-    height: 60px
-    background-color: rgba(0, 0, 0, 0) 
-    padding-left: 20px
-    text-align: left
-    transition: 0.4s
-    margin-bottom: 50px
-    &::after
-        content: ""
-        position: absolute
-        right: 20px
-        width: 35px
-        height: 35px
-        top: 18%
-
-
 // Страница - Шифр Цезаря
-// Видеоплеер
-.player
-    &__container
-        display: flex
-        justify-content: center
-        margin-bottom: 100px
-        min-height: 500px
-    &__videoplayer
-        width: 70%
-        height: 500px
-        border-radius: 20px
-
-// Кнопки перекючения режима шифрование/дешифрование
-.switch-buttons
-    display: inline-block
-    overflow: hidden
-    display: flex
-    justify-content: center
-    & input[type=radio]
-        display: none
-    & label
-        display: inline-block
-        cursor: pointer
-        padding: 5px 111px
-        text-align: center
-        border: 1px solid $base-color-violet
-        color: $base-color-violet
-        font-size: 24px
-        width: 450px
-    & .switch-item:first-child label
-        border-right: none
-    & input[type=radio]:checked + label 
-        background-color: $base-color-violet
-        color: $base-color-white
-        transition: 0.2s all
-    & label:hover
-        color: $base-radio-violet-color-hover
-        
-.switch-item
-    display: inline-block
-    float: left
-    
-
 // Шифрование
 .encryption
     &__switch-buttons
@@ -410,74 +471,8 @@ body
     // &__button-block
     //     width: 900px
         
-.textarea
-    width: 900px
-    position: relative
-    height: 300px
-    resize: none
-    border: 1px solid $base-color-violet
-    margin-bottom: 20px
-    color: $base-color-violet
-    font-size: 18px
-    &:focus
-        outline-color: $base-color-violet
-
-.copy-button
-    position: absolute
-    top: 0.5em
-    right: 7.5em
-    z-index: 100
-    width: 24px
-    height: 24px
-    &::before
-        content: ""
-        display: block
-        width: 24px
-        height: 24px
-        background-image: url("../icons/Files.svg")
-    // &:hover
-        
-    //     background-color: rgba(217, 217, 217, 0.9)
-        
-.copy-container
-    text-align: center
-
-.copy-input-result
-    // transition: 0.1s
-    display: none
-    &_show
-        margin: 0
-        background-color: rgba(74, 74, 74, 0.8)
-        color: $base-color-white
-        display: inline-block
-        position: fixed
-        bottom: 50px
-        left: 50%
-        // margin-right: -50%
-        padding: 2px 40px
-        // transform: translate(-50%, -50%)
-        animation: anim 0.3s forwards
-
-@keyframes anim
-    0%
-        transform: translateY(150000%)
-    100%
-        transform: translateY(100%)
-
-.encrypt-button
-    padding: 16px 57px
-    display: flex
-    align-items: center
-    background-color: rgba(0, 0, 0, 0) 
-    border: 1px solid $base-color-violet
-    color: $base-color-violet
-    font-size: 20px
-    &:hover
-        background-color: $base-button-violet-color-hover 
-        color: $base-color-white
 
 .ceasar-footer
-    background-color: $base-color-violet
     &__logo
         color: $base-color-white
 .footer-title_violet
@@ -494,11 +489,6 @@ body
         &:hover
             color: $base-button-white-color-hover
             transition: 0.3s
-
-
-
-
-
 
 // Главная страница - разрешение 991px
 @media (max-width: 991px)
