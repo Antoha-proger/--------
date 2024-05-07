@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap')
+    
+$base-white-color: #FFFFFF
+$base-black-color: #000000
+$base-violet-color: #421AFF
+$base-font: "Vollkorn SC"
+
+// Общие стили
+*
+    box-sizing: border-box
+
+body
+    font-family: $base-font
+
+.container
+    max-width: 1140px
+
+// Заголовки
+.title
+    font-size: 32px
+    font-weight: bold
+
+// Обычный текст
+.text
+    font-size: 18px
+
+
+// Шапка
+.author-header
+    &__container
+        min-height: 100px
+        padding: 15px 0
+    &__navbar
+        a
+            color: $base-black-color
+            font-weight: 600
+            &:hover
+                scale: 1.2
+
+.navbar-nav
+    column-gap: 1.875rem
+                  
+.author-header .logo
+    padding: 0
+    font-size: 32px
+    font-weight: bold
+    &:focus-visible
+        outline: none
+
+.general
+    position: relative
+    min-height: 700px
+    &__container
+        padding-left: 0
+        // display: flex
+        // justify-content: space-between
+    // &__left-part
+    //     text-align: left
+    &__bottom-part
+        position: absolute
+        bottom: 0
+        right: 0
+        display: flex
+        column-gap: 130px
+    &__title-block
+        position: absolute
+        padding-top: 44px
+        padding-bottom: 44px
+        width: 500px
+        text-align: right
+        padding-right: 25px
+        left: 0
+        top: 72px
+        display: inline-block
+        background-color: $base-violet-color
+        color: $base-white-color
+        border-bottom-right-radius: 20px
+    &__text
+        align-self: center
+        margin-left: 93px
+        color: $base-black-color
+        font-size: 18px
+
+.card
+    border: none
+    max-width: 361px
+    background: transparent
+    transition: all 0.3s
+    &:hover
+        scale: 1.2
+    &:has(~ .card:hover), &:hover ~ .card
+        scale: 0.8
+        
+    img
+        margin-bottom: 20px
+    &__title
+        color: $base-white-color
+        margin-bottom: 20px
+    &__text
+        color: $base-white-color
+
+
+.development
+    background-color: $base-black-color
+    min-height: 650px
+    &__container
+        padding-top: 80px
+    &__title
+        color: $base-white-color
+        margin-bottom: 60px
+    &__cards-block
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 30px
+        

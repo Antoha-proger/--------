@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vollkorn SC";
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.author-header__container {
+  min-height: 100px;
+  padding: 15px 0;
+}
+.author-header__navbar a {
+  color: #000000;
+  font-weight: 600;
+}
+.author-header__navbar a:hover {
+  scale: 1.2;
+}
+
+.navbar-nav {
+  -moz-column-gap: 1.875rem;
+       column-gap: 1.875rem;
+}
+
+.author-header .logo {
+  padding: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+.author-header .logo:focus-visible {
+  outline: none;
+}
+
+.general {
+  position: relative;
+  min-height: 700px;
+}
+.general__container {
+  padding-left: 0;
+}
+.general__bottom-part {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  -moz-column-gap: 130px;
+       column-gap: 130px;
+}
+.general__title-block {
+  position: absolute;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  width: 500px;
+  text-align: right;
+  padding-right: 25px;
+  left: 0;
+  top: 72px;
+  display: inline-block;
+  background-color: #421AFF;
+  color: #FFFFFF;
+  border-bottom-right-radius: 20px;
+}
+.general__text {
+  align-self: center;
+  margin-left: 93px;
+  color: #000000;
+  font-size: 18px;
+}
+
+.card {
+  border: none;
+  max-width: 361px;
+  background: transparent;
+  transition: all 0.3s;
+}
+.card:hover {
+  scale: 1.2;
+}
+.card:has(~ .card:hover), .card:hover ~ .card {
+  scale: 0.8;
+}
+.card img {
+  margin-bottom: 20px;
+}
+.card__title {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.card__text {
+  color: #FFFFFF;
+}
+
+.development {
+  background-color: #000000;
+  min-height: 650px;
+}
+.development__container {
+  padding-top: 80px;
+}
+.development__title {
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+.development__cards-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}/*# sourceMappingURL=author_style.css.map */

@@ -177,10 +177,8 @@ body {
   display: inline-block;
   position: fixed;
   bottom: 50px;
-  left: 50%;
+  left: 45%;
   padding: 2px 40px;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
   animation: anim 0.3s forwards;
 }
 
@@ -372,7 +370,7 @@ body {
   align-items: center;
   padding-top: 83px;
 }
-.сaesars-сipher__left-part img {
+.сaesars-сipher__container img {
   width: 530px;
   height: 452px;
 }

@@ -8,6 +8,7 @@ $base-font: "Vollkorn SC"
 $base-button-violet-color-hover: #694CD2
 $base-button-white-color-hover: #FFFFF0
 $base-radio-violet-color-hover: #B8A5FF
+
 // Общие стили
 *
     box-sizing: border-box
@@ -165,10 +166,8 @@ body
         display: inline-block
         position: fixed
         bottom: 50px
-        left: 50%
+        left: 45%
         padding: 2px 40px
-        margin-right: -50%
-        transform: translate(-50%, -50%)
         animation: anim 0.3s forwards
 
 @keyframes anim
@@ -271,7 +270,6 @@ body
     background-color: $base-color-violet
     &__container
         min-height: 650px
-        // padding-top: 130px
         display: flex
         align-items: center
         column-gap: 34px
@@ -289,7 +287,6 @@ body
 // Слайдер
 .main-slider
     &__container
-        // padding-top: 83px
         margin-bottom: 20px
     &__title
         color: $base-color-violet
@@ -326,16 +323,12 @@ body
         justify-content: space-between
         column-gap: 150px
         align-items: center
-        // margin-bottom: 50px
         padding-top: 83px
-    &__left-part
-        // width: 50%
         img
             width: 530px
             height: 452px
     &__right-part
         align-self: flex-start
-        // width: 50%
     &__title
         margin-bottom: 60px
         color: $base-color-white
@@ -430,10 +423,8 @@ body
         min-height: 200px
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        // column-gap: 180px
         justify-content: space-between
     &__logo
-        // background-color: $base-color-violet
         color: $base-color-violet
         margin-bottom: 20px
         pointer-events: none
@@ -468,9 +459,6 @@ body
         align-items: center
         flex-direction: column
         margin-bottom: 150px
-    // &__button-block
-    //     width: 900px
-        
 
 .ceasar-footer
     &__logo
@@ -720,7 +708,6 @@ body
         row-gap: 20px
         & label
             width: 100%
-            // font-size: 14px
         & .switch-item:first-child label
             border-right: 1px solid $base-color-violet
 
