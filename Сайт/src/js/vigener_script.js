@@ -68,9 +68,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Таблица соответствия букв алфавитов для расшифрования
     const alphabetTables = {
-        en: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
-        ru: 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя',
+        'en': 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+        'ru': 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя',
     };
+
+    console.log(alphabetTables['en']);
+    console.log(alphabetTables['ru']);
 
     let encrypt_radio = document.querySelector('.encrypt-radio');
     let decrypt_radio = document.querySelector('.decrypt-radio');
@@ -87,9 +90,11 @@ window.addEventListener('DOMContentLoaded', () => {
         enc = false;
     })
 
+    // user_text.value[0].toLowerCase() === user_text.value[0]
+
     encrypt_decrypt_btn.addEventListener('click', () => {
-        let alphabet = alphabetTables[user_text.value[0].toLowerCase() === user_text.value[0] ? 'en' : 'ru'];
-        let key = (user_text.value[0].toLowerCase() === user_text.value[0]) ? 'LEMON' : 'ЛИМОН';
+        let alphabet = alphabetTables[(alphabetTables['en'].includes(user_text.value[0])) ? 'en' : 'ru'];
+        let key = (alphabetTables['en'].includes(user_text.value[0])) ? 'LEMON' : 'ЛИМОН';
         let vigener = new Vigenere(alphabet);
 
         if (enc) {
