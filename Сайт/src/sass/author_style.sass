@@ -31,6 +31,54 @@ body
     &:focus
         box-shadow: none
 
+.btn-up
+    position: fixed
+    bottom: 70px
+    right: 40px
+    background-color: $base-black-color
+    width: 50px
+    height: 50px
+    display: none
+    border-radius: 50px
+    cursor: pointer
+    &::before
+        content: ""
+        background: transparent no-repeat center center
+        background-size: 100% 100%
+        width: 24px
+        height: 24px
+        background-image: url("../icons/ArrowUp.svg")
+    
+    &-show
+        display: flex
+        justify-content: center
+        align-items: center
+
+// Заголовки футера 
+.footer-title
+    color: $base-black-color
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 15px
+
+// Элементы футера
+.footer-item
+     margin-bottom: 10px
+     a
+        text-decoration: none
+        font-size: 16px
+        color: #918f8f
+        
+// Списки футера
+.footer-list
+    padding: 0
+    list-style: none
+
+.line
+    width: 100%
+    height: 1px
+    background-color: $base-black-color
+
 // Шапка
 .author-header
     &__container
@@ -59,10 +107,6 @@ body
     min-height: 700px
     &__container
         padding-left: 0
-        // display: flex
-        // justify-content: space-between
-    // &__left-part
-    //     text-align: left
     &__bottom-part
         position: absolute
         bottom: 0
@@ -130,6 +174,7 @@ body
     &__content
         display: grid
         grid-template-columns: repeat(2, 1fr)
+        margin-bottom: 100px
     &__toggle-button
         grid-column: span 2
         width: 40px
@@ -144,7 +189,6 @@ body
         transition: rotate 0.2s
         &::before
             content: ""
-            // background: transparent no-repeat center center
             background-size: 100% 100%
             width: 24px
             height: 24px
@@ -153,9 +197,9 @@ body
             background-color: $base-gray-color
         &_wrap
             rotate: 180deg
-            // transition: all 0.2s
     &__line
         margin-bottom: 20px
+        
     &__switch-buttons
         display: flex
         flex-direction: column
@@ -221,9 +265,25 @@ body
         &_wrap
             width: 70vw
 
-        
-.line
-    width: 100%
-    height: 1px
-    background-color: $base-black-color
+// Футер
+.footer
+    &__container
+        padding-top: 40px
+        min-height: 200px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        justify-content: space-between
+    &__logo
+        color: $base-black-color
+        margin-bottom: 20px
+        pointer-events: none
+    &__social-media-list
+        padding: 0
+        list-style: none
+        display: flex
+        column-gap: 46px
+    &__algorithm-block
+        justify-self: end
+    &__about-block
+        justify-self: end
         
