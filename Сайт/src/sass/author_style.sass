@@ -3,6 +3,7 @@
 $base-white-color: #FFFFFF
 $base-black-color: #000000
 $base-violet-color: #421AFF
+$base-gray-color: #B8B4B4
 $base-font: "Vollkorn SC"
 
 // Общие стили
@@ -24,6 +25,11 @@ body
 .text
     font-size: 18px
 
+.navbar-toggler
+    border: none
+    color: $base-black-color
+    &:focus
+        box-shadow: none
 
 // Шапка
 .author-header
@@ -34,6 +40,7 @@ body
         a
             color: $base-black-color
             font-weight: 600
+            transition: all 0.3s
             &:hover
                 scale: 1.2
 
@@ -102,9 +109,11 @@ body
 
 .development
     background-color: $base-black-color
+    margin-bottom: 80px
     min-height: 650px
     &__container
         padding-top: 80px
+        
     &__title
         color: $base-white-color
         margin-bottom: 60px
@@ -112,4 +121,109 @@ body
         display: grid
         grid-template-columns: repeat(3, 1fr)
         column-gap: 30px
+
+.technique
+    min-height: 600px
+    &__title
+        text-align: center
+        margin-bottom: 60px
+    &__content
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+    &__toggle-button
+        grid-column: span 2
+        width: 40px
+        height: 40px
+        border: none
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $base-white-color
+        border-radius: 20px
+        margin-bottom: 40px
+        transition: rotate 0.2s
+        &::before
+            content: ""
+            // background: transparent no-repeat center center
+            background-size: 100% 100%
+            width: 24px
+            height: 24px
+            background-image: url("../icons/switch-button.svg")
+        &:hover
+            background-color: $base-gray-color
+        &_wrap
+            rotate: 180deg
+            // transition: all 0.2s
+    &__line
+        margin-bottom: 20px
+    &__switch-buttons
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        min-height: 300px
+        padding-left: 15px
+        width: 15vw
+        & input[type=radio]
+            display: none
+
+    &__tech-title
+        display: inline-block
+        cursor: pointer
+        text-align: center
+        padding-left: 20px
+        font-size: 24px
+        font-weight: bold
+        &_wrap
+            transition: all 0.2s
+            display: none
+
+    .technique__tech-logo
+        padding: 0
+        cursor: pointer
+        &_wrap
+            img
+                transition: all 0.3s
+                width: 36px
+                height: 48px
+
+    &__switch-item
+        display: flex
+        align-items: center
+        max-width: 230px
+        min-height: 70px
+        transition: all 0.2s
+        position: relative
+        &::after
+            position: absolute
+            bottom: -5px
+            content: ""
+            display: block
+            height: 1px
+            width: 0
+            background-color: $base-black-color
+            transition: 0.3s
+        &:has(> .technique__btn-check:checked):after
+            width: 100%
+        &_wrap
+            max-width: 40px
+            transition: all 0.2s
+            &::after
+                bottom: 5px
+
+    &__technology-description
+        display: flex
+        justify-content: center
+        align-items: center
+        border-left: 1px solid $base-black-color
+        padding-left: 50px
+        width: 50vw
+        transition: all 0.3s
+        &_wrap
+            width: 70vw
+
+        
+.line
+    width: 100%
+    height: 1px
+    background-color: $base-black-color
         
