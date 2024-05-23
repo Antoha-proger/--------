@@ -367,15 +367,67 @@ body {
   .container {
     max-width: 100%;
   }
+  .author-header .logo {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  .navbar-toggler {
+    margin: 0 auto;
+  }
+  .navbar-collapse {
+    text-align: center;
+  }
+  .general__title-block {
+    width: 400px;
+  }
+  .development {
+    margin-bottom: 40px;
+  }
+  .development__container {
+    padding-top: 20px;
+  }
   .development__cards-block {
     grid-template-columns: repeat(1, 1fr);
   }
   .card {
-    max-width: 350px;
     justify-self: center;
     margin-bottom: 70px;
   }
   .footer__container {
     flex-direction: column;
+  }
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .technique__content {
+    flex-direction: column;
+  }
+  .technique__switch-buttons {
+    flex-direction: row;
+    min-height: 150px;
+    justify-content: none;
+    padding-left: 0;
+    margin-right: 0;
+  }
+  .technique__switch-item {
+    flex-direction: column;
+  }
+  .technique__switch-item::after {
+    bottom: 50px;
+  }
+  .technique__switch-item_wrap::after {
+    bottom: 90px;
+  }
+  .technique__tech-title {
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .technique__technology-description {
+    border: none;
+    padding: 0;
   }
 }/*# sourceMappingURL=author_style.css.map */
