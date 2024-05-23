@@ -336,11 +336,14 @@ body {
     position: static;
     margin-left: -150px;
     margin-bottom: 40px;
+    padding-left: 30px;
+    width: 600px;
   }
   .general__bottom-part {
     margin-bottom: 40px;
     display: block;
     position: static;
+    padding-left: 50px;
   }
   .general__bottom-part img {
     display: none;
@@ -358,5 +361,21 @@ body {
   .footer__container {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+  .development__cards-block {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    max-width: 350px;
+    justify-self: center;
+    margin-bottom: 70px;
+  }
+  .footer__container {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=author_style.css.map */

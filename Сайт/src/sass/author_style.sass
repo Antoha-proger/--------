@@ -321,14 +321,18 @@ body
             position: static
             margin-left: -150px
             margin-bottom: 40px
+            padding-left: 30px
+            width: 600px
         &__bottom-part
             margin-bottom: 40px
             display: block
             position: static
+            padding-left: 50px
             img
                 display: none
         &__text
             margin-left: 0
+
     .card
         overflow: hidden
         max-width: 210px
@@ -339,5 +343,22 @@ body
     .footer__container 
         display: flex
         justify-content: space-between
+
+@media (max-width: 767px)
+    // Контейнер
+    .container
+        max-width: 100%
+
+    .development
+        &__cards-block
+            grid-template-columns: repeat(1, 1fr)
+    .card
+        max-width: 350px
+        justify-self: center
+        margin-bottom: 70px
+    .footer
+        &__container
+            flex-direction: column
+            
 
         
