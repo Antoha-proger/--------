@@ -119,8 +119,6 @@ body {
   bottom: 0;
   right: 0;
   display: flex;
-  -moz-column-gap: 130px;
-       column-gap: 130px;
 }
 .general__title-block {
   position: absolute;
@@ -141,6 +139,7 @@ body {
   margin-left: 93px;
   color: #000000;
   font-size: 18px;
+  margin-right: 50px;
 }
 
 .card {
@@ -148,6 +147,7 @@ body {
   max-width: 361px;
   background: transparent;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card:hover {
   scale: 1.2;
@@ -181,8 +181,8 @@ body {
 .development__cards-block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  -moz-column-gap: 3vw;
+       column-gap: 3vw;
 }
 
 .technique {
@@ -193,12 +193,10 @@ body {
   margin-bottom: 60px;
 }
 .technique__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   margin-bottom: 100px;
 }
 .technique__toggle-button {
-  grid-column: span 2;
   width: 40px;
   height: 40px;
   border: none;
@@ -232,7 +230,7 @@ body {
   justify-content: space-between;
   min-height: 300px;
   padding-left: 15px;
-  width: 15vw;
+  margin-right: 80px;
 }
 .technique__switch-buttons input[type=radio] {
   display: none;
@@ -261,7 +259,7 @@ body {
 .technique__switch-item {
   display: flex;
   align-items: center;
-  max-width: 230px;
+  width: 230px;
   min-height: 70px;
   transition: all 0.2s;
   position: relative;
@@ -292,11 +290,7 @@ body {
   align-items: center;
   border-left: 1px solid #000000;
   padding-left: 50px;
-  width: 50vw;
   transition: all 0.3s;
-}
-.technique__technology-description_wrap {
-  width: 70vw;
 }
 
 .footer__container {
@@ -323,4 +317,46 @@ body {
 }
 .footer__about-block {
   justify-self: end;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+  .author-header__container {
+    margin: 0;
+    padding: 15px 50px;
+    margin-bottom: 40px;
+    max-width: 950px;
+  }
+  .general {
+    min-height: 450px;
+  }
+  .general__title-block {
+    position: static;
+    margin-left: -150px;
+    margin-bottom: 40px;
+  }
+  .general__bottom-part {
+    margin-bottom: 40px;
+    display: block;
+    position: static;
+  }
+  .general__bottom-part img {
+    display: none;
+  }
+  .general__text {
+    margin-left: 0;
+  }
+  .card {
+    overflow: hidden;
+    max-width: 210px;
+  }
+  .development {
+    min-height: 700px;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=author_style.css.map */

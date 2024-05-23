@@ -7,11 +7,13 @@ window.addEventListener('DOMContentLoaded', () => {
     let technology_description = document.querySelector('.technique__technology-description');
     let radiobutton_list = document.querySelectorAll('.technique__btn-check');
     let technology_description_text = document.querySelector('.technique__description-text');
+    let technique__content = document.querySelector(".technique__content");
     
     technology_toggle_button.addEventListener('click', () => {
         switch_buttons_block.classList.toggle('technique__switch-buttons_wrap');
         technology_toggle_button.classList.toggle('technique__toggle-button_wrap');
         technology_description.classList.toggle('technique__technology-description_wrap');
+        technique__content.classList.toggle('technique__content-wrap')
 
         technology_title.forEach(item => {
             item.classList.toggle('technique__tech-title_wrap');

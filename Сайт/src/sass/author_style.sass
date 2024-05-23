@@ -112,7 +112,7 @@ body
         bottom: 0
         right: 0
         display: flex
-        column-gap: 130px
+        // column-gap: 130px
     &__title-block
         position: absolute
         padding-top: 44px
@@ -131,12 +131,14 @@ body
         margin-left: 93px
         color: $base-black-color
         font-size: 18px
+        margin-right: 50px
 
 .card
     border: none
     max-width: 361px
     background: transparent
     transition: all 0.3s
+    overflow: hidden
     &:hover
         scale: 1.2
     &:has(~ .card:hover), &:hover ~ .card
@@ -164,7 +166,7 @@ body
     &__cards-block
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        column-gap: 30px
+        column-gap: 3vw
 
 .technique
     min-height: 600px
@@ -172,11 +174,9 @@ body
         text-align: center
         margin-bottom: 60px
     &__content
-        display: grid
-        grid-template-columns: repeat(2, 1fr)
+        display: flex
         margin-bottom: 100px
     &__toggle-button
-        grid-column: span 2
         width: 40px
         height: 40px
         border: none
@@ -206,7 +206,7 @@ body
         justify-content: space-between
         min-height: 300px
         padding-left: 15px
-        width: 15vw
+        margin-right: 80px
         & input[type=radio]
             display: none
 
@@ -233,7 +233,7 @@ body
     &__switch-item
         display: flex
         align-items: center
-        max-width: 230px
+        width: 230px
         min-height: 70px
         transition: all 0.2s
         position: relative
@@ -260,10 +260,10 @@ body
         align-items: center
         border-left: 1px solid $base-black-color
         padding-left: 50px
-        width: 50vw
+        // width: 50vw
         transition: all 0.3s
-        &_wrap
-            width: 70vw
+        // &_wrap
+        //     width: 70vw
 
 // Футер
 .footer
@@ -286,4 +286,58 @@ body
         justify-self: end
     &__about-block
         justify-self: end
+
+@media (max-width: 991px)
+    // Контейнер
+    .container
+        max-width: 750px
+        // padding-top: 40px
+        
+    // Шапка
+    // .author-header .logo
+    //     font-size: 24px
+    //     margin-right: 34px
+    // .navbar-nav
+    //     column-gap: 0.938rem
+    // .nav-item
+    //     padding: 0
+    // .nav-link
+    //     font-size: 12px
+    // .dropdown-menu
+    //     padding: 0
+    // .dropdown-item
+    //     font-size: 12px
+
+    .author-header
+         &__container
+            margin: 0
+            padding: 15px 50px
+            margin-bottom: 40px
+            max-width: 950px
+
+    .general
+        min-height: 450px
+        &__title-block 
+            position: static
+            margin-left: -150px
+            margin-bottom: 40px
+        &__bottom-part
+            margin-bottom: 40px
+            display: block
+            position: static
+            img
+                display: none
+        &__text
+            margin-left: 0
+    .card
+        overflow: hidden
+        max-width: 210px
+
+    .development
+        min-height: 700px
+        
+    .footer__container 
+        display: flex
+        justify-content: space-between
+
         
