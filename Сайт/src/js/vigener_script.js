@@ -81,11 +81,15 @@ window.addEventListener('DOMContentLoaded', () => {
     let enc = true;
 
     encrypt_radio.addEventListener('click', () => {
+        output.value = '';
+        user_text.value = '';
         encrypt_decrypt_btn.textContent = 'Зашифровать';
         enc = true;
     })
 
     decrypt_radio.addEventListener('click', () => {
+        user_text.value = '';
+        output.value = '';
         encrypt_decrypt_btn.textContent = 'Дешифровать';
         enc = false;
     })
