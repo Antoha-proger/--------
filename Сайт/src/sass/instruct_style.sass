@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap')
+
+$base-font: "Vollkorn SC"
+$base-brown-color: #634F44
+$base-white-color: #FFFFF0
+
+
+// Общие стили
+*
+    box-sizing: border-box
+
+body
+    font-family: $base-font
+
+.container
+    max-width: 1140px
+
+// Заголовки
+.title
+    font-size: 32px
+    font-weight: bold
+    margin: 0
+
+// Обычный текст
+.text
+    font-size: 18px
+.navbar-toggler
+    border: none
+    color: $base-brown-color
+    &:focus
+        box-shadow: none
+.btn-up
+    position: fixed
+    bottom: 70px
+    right: 40px
+    background-color: $base-brown-color
+    width: 50px
+    height: 50px
+    display: none
+    border-radius: 50px
+    cursor: pointer
+    &::before
+        content: ""
+        background: transparent no-repeat center center
+        background-size: 100% 100%
+        width: 24px
+        height: 24px
+        background-image: url("../icons/ArrowUp.svg")
+    &-show
+        display: flex
+        justify-content: center
+        align-items: center
+
+// Заголовки футера 
+.footer-title
+    color: $base-white-color
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 15px
+
+// Элементы футера
+.footer-item
+     margin-bottom: 10px
+     a
+        text-decoration: none
+        font-size: 16px
+        color: #918f8f
+
+// Списки футера
+.footer-list
+    padding: 0
+    list-style: none
+.navbar-nav
+    column-gap: 1.875rem
+.navbar .navbar-nav .nav-item .nav-link, .logo
+    position: relative
+    padding-right: 0
+    padding-left: 0
+    &::before
+        position: absolute
+        bottom: 5px
+        left: 8
+        content: ""
+        display: block
+        height: 1px
+        width: 0
+        background-color: $base-white-color
+        transition: 0.3s
+    &:hover:before
+        width: 100%
+    &:hover
+        color: $base-white-color
+        
+// Шапка
+.instruct-header
+    background-color: $base-brown-color
+    &__container
+        min-height: 100px
+        padding: 15px 0
+    &__navbar
+        a
+            color: $base-white-color
+            font-weight: 600
+            transition: all 0.3s
+.instruct-header .logo
+    padding: 0
+    font-size: 32px
+    font-weight: bold
+    &:focus-visible
+        outline: none
+.general
+    min-height: 400px
+    background-color: $base-brown-color
+    color: $base-white-color
+    &__container
+        padding-top: 83px
+    &__text
+        max-width: 600px
+    &__title
+        margin-bottom: 30px
+.steps
+    min-height: 1800px
+    color: $base-brown-color
+    &__container
+        padding-top: 83px
+    &__main-title
+        text-align: center
+        margin-bottom: 83px
+    &__wrapper
+        max-width: 32.014vw
+.number
+    color: $base-white-color
+    font-size: 48px
+    font-weight: bold
+    background-color: $base-brown-color
+    width: 100px
+    height: 100px
+    border-radius: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+.step
+    display: flex
+    justify-content: space-between
+    margin-bottom: 100px
+    & .title
+            margin-top: 29px
+            margin-bottom: 30px
+    &_left
+        & .wrapper
+            padding-left: 70px
+            padding-right: 100px
+    &_right
+        & .wrapper
+            padding-left: 100px
+.content
+    display: flex
+    justify-content: space-between
+    & .text
+        font-size: 16px
+
+// Футер
+.footer
+    background-color: $base-brown-color
+    &__container
+        padding-top: 40px
+        min-height: 200px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        justify-content: space-between
+    &__logo
+        color: $base-white-color
+        margin-bottom: 20px
+        pointer-events: none
+    &__social-media-list
+        padding: 0
+        list-style: none
+        display: flex
+        column-gap: 46px
+    &__algorithm-block
+        justify-self: end
+    &__about-block
+        justify-self: end
+
+@media (max-width: 991px)
+    // Контейнер
+    .container
+        max-width: 750px
+    .instruct-header
+         &__container
+            margin: 0
+            padding: 15px 50px
+            max-width: 950px
+    .general
+        min-height: 300px
+        &__container
+            padding-top: 40px
+    .steps
+        min-height: 1100px
+        &__container
+            padding-top: 40px
+        &__main-title
+            margin-bottom: 50px
+        img
+            display: none
+    .step
+        margin-bottom: 50px
+        display: block
+        & .title
+            margin-top: 29px
+            margin-bottom: 30px    
+        & .wrapper
+            padding: 0
+            max-width: 35.25vw
+    .content
+        justify-content: space-around
+        .number
+            align-self: center
+    .number
+        font-size: 80px
+        width: 150px
+        height: 150px
+    .title
+        font-size: 24px
+    .text
+        font-size: 16px
+    .footer__container 
+        display: flex
+        justify-content: space-between
+
+@media (max-width: 767px)
+    // Контейнер
+    .container
+        max-width: 100%
+    .instruct-header .logo
+        font-size: 18px
+        margin: 0 auto
+    .navbar-toggler
+        margin: 0 auto
+    .navbar-collapse
+        text-align: center
+    .general
+        &__container
+            padding-top: 20px
+    .step
+        & .wrapper
+            max-width: 100%
+        &_right .number
+            order: -1
+    .steps
+        & .title
+            text-align: center
+            margin-top: 0
+            margin-bottom: 20px
+    .content
+        flex-direction: column
+    .title
+        font-size: 16px
+    .text
+        font-size: 13px
+    .number
+        font-size: 40px
+        width: 100px
+        height: 100px
+    .footer
+        &__container
+            flex-direction: column
+    

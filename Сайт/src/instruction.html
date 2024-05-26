@@ -3,15 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/instruct_style.css">
     <title>Инструкция</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/fav/favicon-16x16.png">
+    <!-- <link rel="manifest" href="icons/fav/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
-<body style="background-color: #B8A5FF;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               text-align:center;
-               height: 100vh;">
-    <h1 style="color: #FFFFF0;
-    align-self:center;">Эта страница находится в разработке<br>и скоро будет доступна.</h1>
+<body>
+    <!-- Шапка -->
+    <header class="header instruct-header">
+        <div class="container instruct-header__container">
+            <nav class="navbar navbar-expand-md instruct-header__navbar">
+                <div class="container-fluid">
+                  <a class="navbar-brand instruct-header__logo logo" href="index.html">Шифрование</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                    <img src="icons/Menu_Duo_LG.svg" alt="" width="30" height="30">
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" href="author.html">Об авторе</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="instruction.html">
+                            Инструкция
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="general">
+            <div class="general__container container">
+                <h1 class="general__title title">Инструкция</h1>
+                <p class="general__text text">Если работа с сайтом вызывает у вас сложности или вы хотите уточнить какие-то детали, то инструкция поможет вам в этом. <br>
+                <br>
+                Если у вас осталить вопросы, вы можете задать их автору сайта.</p>
+            </div>
+        </section>
+
+        <section class="steps">
+            <div class="steps__container container">
+                <h2 class="steps__main-title title">Этапы работы с сайтом</h2>
+                <section class="steps__first-step step step_left">
+                    <div class="steps__content content">
+                        <p class="steps__first-number number">1</p>
+                        <div class="steps__wrapper wrapper">
+                            <h3 class="steps__title title">Выбор Шифра</h3>
+                            <p class="steps__text text">
+                                Прочитайте описание шифров и 
+                                выберите подходящий. 
+                                Также на каждой странице с шифром есть ролик о том, как этот шифр работает
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/instruct-first.png" alt="" width="555" height="300">
+                </section>
+
+                <section class="steps__second-step step step_right">
+                    <img src="img/instruct-second.png" alt="" width="555" height="300">
+                    <div class="steps__content content">
+                        <div class="steps__wrapper wrapper">
+                            <h3 class="steps__title title">Страница шифра</h3>
+                            <p class="steps__text text">
+                                Перейдите на страницу шифра с помощью кнопки или пунктов навигационного меню. <br>
+                                <br> 
+                                И, если необходимо, просмотрите ролик о том, как этот шифр работает
+                            </p>
+                        </div>
+                        <p class="steps__second-number number">2</p>
+                    </div>
+                </section>
+
+                <section class="steps__third-step step step_left">
+                    <div class="steps__content content">
+                        <p class="steps__third-number number">3</p>
+                        <div class="steps__wrapper wrapper">
+                            <h3 class="steps__title title">Ввод текста</h3>
+                            <p class="steps__text text">
+                                Введите ваш текст в поле ввода и зашифруйте или дешифруйте его с помощью соответствующих кнопок
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/instruct-third.png" alt="" width="555" height="300">
+                </section>
+
+                <section class="steps__forth-step step step_right">
+                    <img src="img/instruct-forth.png" alt="" width="555" height="300">
+                    <div class="steps__content content">
+                        <div class="steps__wrapper wrapper">
+                            <h3 class="steps__title title">Получение текста</h3>
+                            <p class="steps__text text">
+                                После нажатия на кнопку “Зашифровать” или “Дешифровать” вы получите измененный текст.
+                                Вы можете скопировать готовый текст с помощью кнопки в правом верхнем углу
+                            </p>
+                        </div>
+                        <p class="steps__forth-number number">4</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <div class="main__btn-up btn-up"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__social-media-block">
+            <h2 class="footer__logo logo">Шифрование</h2>
+            <ul class="footer__social-media-list">
+              <li class="footer__social-media-item"><a href="https://t.me/gibon22"><img src="icons/telegram-brown.svg" alt=""></a></li>
+              <li class="footer__social-media-item"><a href="https://github.com/Antoha-proger"><img src="icons/github-brown.svg" alt=""></a></li>
+              <li class="footer__social-media-item"><a href="mailto:kobeleva166@gmail.com"><img src="icons/gmail-brown.svg" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="footer__algorithm-block">
+            <ul class="footer__algorithm-list footer-list">
+              <li class="footer__algorithm-title footer-title">Алгоритмы шифрования</li>
+              <li class="footer__algorithm-item footer-item"><a href="ceasar.html">Шифр Цезаря</a></li>
+              <li class="footer__algorithm-item footer-item"><a href="vigener.html">Шифр Виженера</a></li>
+              <li class="footer__algorithm-item footer-item"><a href="atbash.html">Шифр Атбаш</a></li>
+            </ul>
+          </div>
+          <div class="footer__about-block">
+            <ul class="footer__about-list footer-list">
+              <li class="footer__about-title footer-title">О сайте</li>
+              <li class="footer__about-item footer-item"><a href="author.html">Об авторе</a></li>
+              <li class="footer__about-item footer-item"><a href="instruction.html">Инструкция</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main_script.js"></script>
 </body>
 </html>
