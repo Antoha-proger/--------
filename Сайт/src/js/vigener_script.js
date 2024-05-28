@@ -31,6 +31,7 @@ class Vigenere {
         return this.square;
     }
     encrypt(message, key) {
+        let a = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '\!', '\"', '№', ';', '%', '?', ':', '*', '(', ')', '-', '_', '=','+', ',', '/', '\\', '`', '~', '@', '#', '$', '^', '.', '>', '<', '\'', '[', ']', '{', '}', '|']
         let encryptMessage = "";
         // Дублируем ключ до длины сообщения
         let newKey = repeatString(key, message);
@@ -38,6 +39,12 @@ class Vigenere {
         this.generateSquare();
         for (let it = 0; it < message.length; it++) {
             // Индекс строки равный символу сообщения
+            
+            if (a.indexOf(message[it]) != -1) {
+                let ind = a.indexOf(message[it])
+                encryptMessage += a[ind];
+                continue
+            }
             let i = this.alphabet.indexOf(message[it]);
             // Индекс колонки равный символу ключа
             let j = this.alphabet.indexOf(newKey[it]);
@@ -47,10 +54,16 @@ class Vigenere {
         return encryptMessage;
     }
     decrypt(message, key) {
+        let a = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '\!', '\"', '№', ';', '%', '?', ':', '*', '(', ')', '-', '_', '=','+', ',', '/', '\\', '`', '~', '@', '#', '$', '^', '.', '>', '<', '\'', '[', ']', '{', '}', '|']
         let decryptMessage = "";
         let newKey = repeatString(key, message);
         this.generateSquare();
         for (let it = 0; it < message.length; it++) {
+            if (a.indexOf(message[it]) != -1) {
+                let ind = a.indexOf(message[it])
+                decryptMessage += a[ind];
+                continue
+            }
             // Берем символ ключа и ищем индекс строки с данным символом
             let i = this.alphabet.indexOf(newKey[it]);
             let j = this.square[i].indexOf(message[it]);
@@ -69,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Таблица соответствия букв алфавитов для расшифрования
     const alphabetTables = {
         'en': 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
-        'ru': 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя',
+        'ru': 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя'
     };
 
     console.log(alphabetTables['en']);
